@@ -9,7 +9,11 @@ public class CSVImportMenu : MonoBehaviour
     [MenuItem("CSV Import/Generate Question Data")]
     public static void CSVGenerate()
     {
-        if (Selection.activeObject == null) return;
+        if (Selection.activeObject == null)
+        {
+            Debug.Log("Please select a CSV file");
+            return;
+        }
 
         string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), AssetDatabase.GetAssetPath(Selection.activeObject));
 
@@ -34,47 +38,54 @@ public class CSVImportMenu : MonoBehaviour
         }
     }
 
-    private static void PerformGeneration(List <Dictionary<string, object>> csvData)
+    private static void PerformGeneration(List<Dictionary<string, object>> csvData)
     {
+        List<QuestionsData.Question> questionsList = new List<QuestionsData.Question>();
+
         for (int i = 0; i < csvData.Count; i++)
         {
             Dictionary<string, object> _potentialQuestionEntry = csvData[i];
-            
-            CreateScriptableObjectQuestionData(_potentialQuestionEntry["QUESTION"].ToString(), _potentialQuestionEntry["DIFFICULTY"].ToString(), _potentialQuestionEntry["CORRECT ANSWER"].ToString());
-            
-            Debug.Log($"Question : {_potentialQuestionEntry["QUESTION"]}");
-            Debug.Log($"Difficulty : {_potentialQuestionEntry["DIFFICULTY"]}");
-            Debug.Log($"Correct Answer : {_potentialQuestionEntry["CORRECT ANSWER"]}");
 
-            if(i > 8) break;
+            string questionText = _potentialQuestionEntry["QUESTION"].ToString();
+            string difficulty = _potentialQuestionEntry["DIFFICULTY"].ToString();
+            string correctAnswer = _potentialQuestionEntry["CORRECT ANSWER"].ToString();
+
+            string[] choices = new string[4];
+            choices[0] = _potentialQuestionEntry["CORRECT ANSWER"].ToString();
+            choices[1] = _potentialQuestionEntry["WRONG 1"].ToString();
+            choices[2] = _potentialQuestionEntry["WRONG 2"].ToString();
+            choices[3] = _potentialQuestionEntry["WRONG 3"].ToString();
+
+            int correctChoiceIndex = System.Array.IndexOf(choices, correctAnswer);
+
+            QuestionsData.Question question = new QuestionsData.Question
+            {
+                questionText = questionText,
+                difficulty = difficulty,
+                correctAnswer = correctAnswer,
+                choices = choices,
+                correctChoiceIndex = correctChoiceIndex
+            };
+
+            questionsList.Add(question);
+
+            Debug.Log($"Question : {questionText}");
+            Debug.Log($"Difficulty : {difficulty}");
+            Debug.Log($"Correct Answer : {correctAnswer}");
+            Debug.Log($"Choices : {string.Join(", ", choices)}");
         }
+
+        CreateScriptableObjectQuestionData(questionsList);
     }
 
-    private static void CreateScriptableObjectQuestionData(string questionText, string difficulty, string correctAnswer)
+    private static void CreateScriptableObjectQuestionData(List<QuestionsData.Question> questionsList)
     {
         QuestionsData newQuestionEntry = ScriptableObject.CreateInstance<QuestionsData>();
+        newQuestionEntry.Questions = questionsList;
 
-        // Initialize the Questions list if it is null
-        if (newQuestionEntry.Questions == null)
-        {
-            newQuestionEntry.Questions = new List<QuestionsData.Question>();
-        }
-
-        // Create a new Question struct instance and set its fields
-        QuestionsData.Question newQuestion = new QuestionsData.Question
-        {
-            questionText = questionText,
-            difficulty = difficulty,
-            // choices = new string[] { }, // You would need to set the choices as well
-            correctAnswer = correctAnswer,
-            // correctChoiceIndex = correctChoiceIndex
-        };
-
-        // Add the new Question to the Questions list
-        newQuestionEntry.Questions.Add(newQuestion);
-
-        // Uncomment these lines to create and save the asset if this method is used within Unity Editor scripts
-        AssetDatabase.CreateAsset(newQuestionEntry, $"Assets/Resources/QuestionData/{questionText}.asset");
+        // Save the ScriptableObject to the Assets folder
+        string assetPath = "Assets/GeneratedQuestionsData.asset";
+        AssetDatabase.CreateAsset(newQuestionEntry, assetPath);
         AssetDatabase.SaveAssets();
     }
 
@@ -83,3 +94,4 @@ public class CSVImportMenu : MonoBehaviour
         return FullPath.ToLower().EndsWith(".csv");
     }
 }
+
