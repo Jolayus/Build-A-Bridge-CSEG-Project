@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CSVImportMenu : MonoBehaviour
 {
-    // Add a menu item named "Do Something" to MyMenu in the menu bar.
     [MenuItem("CSV Import/Generate Question Data")]
     public static void CSVGenerate()
     {
@@ -16,6 +15,7 @@ public class CSVImportMenu : MonoBehaviour
         }
 
         string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), AssetDatabase.GetAssetPath(Selection.activeObject));
+        string fileName = System.IO.Path.GetFileName(path);
 
         if (!IsCSVFile(path))
         {
@@ -25,11 +25,21 @@ public class CSVImportMenu : MonoBehaviour
 
         List<Dictionary<string, object>> rawCSVData = CSVReading.CSVReader.Read(path);
 
-        if(rawCSVData.Count > 0)
+        if (rawCSVData.Count > 0)
         {
-            bool confirmed = EditorUtility.DisplayDialog("Generate Question Data", $"Are you sure you want to generate { rawCSVData.Count } question data from the selected CSV file?", "Yes", "No");
+            bool confirmed = EditorUtility.DisplayDialog("Generate Question Data", $"Are you sure you want to generate {rawCSVData.Count} question data from the selected CSV file?", "Yes", "No");
 
-            if (confirmed) PerformGeneration(rawCSVData);
+            if (confirmed)
+            {
+                if (fileName.ToLower().Contains("easy") || fileName.ToLower().Contains("medium"))
+                {
+                    PerformGenerationEasyMedium(rawCSVData);
+                }
+                else if (fileName.ToLower().Contains("hard"))
+                {
+                    PerformGenerationHard(rawCSVData);
+                }
+            }
         }
         else
         {
@@ -38,9 +48,37 @@ public class CSVImportMenu : MonoBehaviour
         }
     }
 
-    private static void PerformGeneration(List<Dictionary<string, object>> csvData)
+    private static void PerformGenerationEasyMedium(List<Dictionary<string, object>> csvData)
     {
-        List<QuestionsData.Question> questionsList = new List<QuestionsData.Question>();
+        QuestionsData questionsDataNewEntry = ScriptableObject.CreateInstance<QuestionsData>();
+
+        for (int i = 0; i < csvData.Count; i++)
+        {
+            Dictionary<string, object> _potentialQuestionEntry = csvData[i];
+
+            string questionText = _potentialQuestionEntry["QUESTION"].ToString();
+            string difficulty = _potentialQuestionEntry["DIFFICULTY"].ToString();
+            string correctAnswer = _potentialQuestionEntry["CORRECT ANSWER"].ToString();
+
+            QuestionsData.QuestionSimple simpleQuestion = new QuestionsData.QuestionSimple
+            {
+                questionText = questionText,
+                difficulty = difficulty,
+                correctAnswer = correctAnswer,
+            };
+
+            questionsDataNewEntry.simpleQuestions.Add(simpleQuestion);
+
+            Debug.Log($"Question added: {questionText}");
+        }
+
+        Debug.Log($"Total questions generated: {questionsDataNewEntry.simpleQuestions.Count}");
+        CreateScriptableObjectQuestionData(questionsDataNewEntry);
+    }
+
+    private static void PerformGenerationHard(List<Dictionary<string, object>> csvData)
+    {
+        QuestionsData questionsDataNewEntry = ScriptableObject.CreateInstance<QuestionsData>();
 
         for (int i = 0; i < csvData.Count; i++)
         {
@@ -58,7 +96,7 @@ public class CSVImportMenu : MonoBehaviour
 
             int correctChoiceIndex = System.Array.IndexOf(choices, correctAnswer);
 
-            QuestionsData.Question question = new QuestionsData.Question
+            QuestionsData.QuestionMultipleChoice mcQuestion = new QuestionsData.QuestionMultipleChoice
             {
                 questionText = questionText,
                 difficulty = difficulty,
@@ -67,26 +105,24 @@ public class CSVImportMenu : MonoBehaviour
                 correctChoiceIndex = correctChoiceIndex
             };
 
-            questionsList.Add(question);
+            questionsDataNewEntry.multipleChoiceQuestions.Add(mcQuestion);
 
-            Debug.Log($"Question : {questionText}");
-            Debug.Log($"Difficulty : {difficulty}");
-            Debug.Log($"Correct Answer : {correctAnswer}");
-            Debug.Log($"Choices : {string.Join(", ", choices)}");
+            Debug.Log($"Question added: {questionText}");
         }
 
-        CreateScriptableObjectQuestionData(questionsList);
+        Debug.Log($"Total questions generated: {questionsDataNewEntry.multipleChoiceQuestions.Count}");
+        CreateScriptableObjectQuestionData(questionsDataNewEntry);
     }
 
-    private static void CreateScriptableObjectQuestionData(List<QuestionsData.Question> questionsList)
+    private static void CreateScriptableObjectQuestionData(QuestionsData questionsData)
     {
-        QuestionsData newQuestionEntry = ScriptableObject.CreateInstance<QuestionsData>();
-        newQuestionEntry.Questions = questionsList;
-
         // Save the ScriptableObject to the Assets folder
-        string assetPath = "Assets/GeneratedQuestionsData.asset";
-        AssetDatabase.CreateAsset(newQuestionEntry, assetPath);
+        string assetPath = $"Assets/Scripts/CSV DATA/QuestionData.asset";
+        AssetDatabase.CreateAsset(questionsData, assetPath);
         AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+
+        Debug.Log($"Created asset with {questionsData.multipleChoiceQuestions.Count} questions at {assetPath}");
     }
 
     private static bool IsCSVFile(string FullPath)
@@ -94,4 +130,3 @@ public class CSVImportMenu : MonoBehaviour
         return FullPath.ToLower().EndsWith(".csv");
     }
 }
-
