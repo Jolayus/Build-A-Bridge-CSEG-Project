@@ -50,7 +50,7 @@ public class CSVImportMenu : MonoBehaviour
 
     private static void PerformGenerationEasyMedium(List<Dictionary<string, object>> csvData)
     {
-        QuestionsData questionsDataNewEntry = ScriptableObject.CreateInstance<QuestionsData>();
+        QuestionsData questionsDataNewEntry = LoadOrCreateQuestionsData();
 
         for (int i = 0; i < csvData.Count; i++)
         {
@@ -73,12 +73,12 @@ public class CSVImportMenu : MonoBehaviour
         }
 
         Debug.Log($"Total questions generated: {questionsDataNewEntry.simpleQuestions.Count}");
-        CreateScriptableObjectQuestionData(questionsDataNewEntry);
+        SaveQuestionsData(questionsDataNewEntry);
     }
 
     private static void PerformGenerationHard(List<Dictionary<string, object>> csvData)
     {
-        QuestionsData questionsDataNewEntry = ScriptableObject.CreateInstance<QuestionsData>();
+        QuestionsData questionsDataNewEntry = LoadOrCreateQuestionsData();
 
         for (int i = 0; i < csvData.Count; i++)
         {
@@ -111,18 +111,39 @@ public class CSVImportMenu : MonoBehaviour
         }
 
         Debug.Log($"Total questions generated: {questionsDataNewEntry.multipleChoiceQuestions.Count}");
-        CreateScriptableObjectQuestionData(questionsDataNewEntry);
+        SaveQuestionsData(questionsDataNewEntry);
     }
 
-    private static void CreateScriptableObjectQuestionData(QuestionsData questionsData)
+    private static QuestionsData LoadOrCreateQuestionsData()
     {
-        // Save the ScriptableObject to the Assets folder
-        string assetPath = $"Assets/Scripts/CSV DATA/QuestionData.asset";
-        AssetDatabase.CreateAsset(questionsData, assetPath);
+        string assetPath = "Assets/Scripts/CSV DATA/QuestionData.asset";
+        QuestionsData questionsData = AssetDatabase.LoadAssetAtPath<QuestionsData>(assetPath);
+
+        if (questionsData == null)
+        {
+            questionsData = ScriptableObject.CreateInstance<QuestionsData>();
+        }
+
+        return questionsData;
+    }
+
+    private static void SaveQuestionsData(QuestionsData questionsData)
+    {
+        string assetPath = "Assets/Scripts/CSV DATA/QuestionData.asset";
+
+        if (AssetDatabase.Contains(questionsData))
+        {
+            EditorUtility.SetDirty(questionsData);
+        }
+        else
+        {
+            AssetDatabase.CreateAsset(questionsData, assetPath);
+        }
+
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        Debug.Log($"Created asset with {questionsData.multipleChoiceQuestions.Count} questions at {assetPath}");
+        Debug.Log($"Saved asset with {questionsData.simpleQuestions.Count} simple questions and {questionsData.multipleChoiceQuestions.Count} multiple choice questions at {assetPath}");
     }
 
     private static bool IsCSVFile(string FullPath)
