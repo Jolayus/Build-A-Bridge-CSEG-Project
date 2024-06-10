@@ -1,118 +1,120 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-// public class QuestionManager : MonoBehaviour
-// {
-//     public Text questionText;
-//     public Text scoreText;
-//     public Text finalScoreText;
-//     public Button[] choicesButtons;
-//     public QuestionsData QData; // For the reference of Scriptable Object
+public class QuestionManager : MonoBehaviour
+{
+    public Text questionText;
+    public Text scoreText;
+    public Text finalScoreText;
+    public Button[] choicesButtons;
+    public QuestionsData QData; // For the reference of Scriptable Object
 
-//     public GameObject Player;
+    public GameObject Player;
 
-//     private int currentQuestionIndex = 0;
-//     private int score = 0;
+    private int currentQuestionIndex = 0;
+    private int score = 0;
 
-//     void Start()
-//     {
-//         Player = GameObject.FindWithTag("Player");
-//         if (QData != null && QData.Questions.Count > 0)
-//         {
-//             SetQuestion(currentQuestionIndex);
-//         }
-//         else
-//         {
-//             Debug.LogError("QuestionsData is not assigned or contains no questions.");
-//         }
-//     }
+    void Start()
+    {
+        Player = GameObject.FindWithTag("Player");
+        if (QData != null && (QData.multipleChoiceQuestions.Count > 0 || QData.simpleQuestions.Count > 0))
+        {
+            SetQuestion(currentQuestionIndex);
+        }
+        else
+        {
+            Debug.LogError("QuestionsData is not assigned or contains no questions.");
+        }
+    }
 
-//     void SetQuestion(int CQIndex)
-//     {
-//         var question = QData.Questions[CQIndex] as QuestionsData.QuestionMultipleChoice;
-//         if (question != null)
-//         {
-//             questionText.text = question.questionText;
+    void SetQuestion(int CQIndex)
+    {
+        var question = QData.multipleChoiceQuestions[CQIndex] as QuestionsData.QuestionMultipleChoice;
 
-//             foreach (Button button in choicesButtons)
-//             {
-//                 button.onClick.RemoveAllListeners();
-//             }
+        if (question != null)
+        {
+            questionText.text = question.questionText;
 
-//             for (int i = 0; i < choicesButtons.Length; i++)
-//             {
-//                 choicesButtons[i].gameObject.SetActive(i < question.choices.Length);
-//                 choicesButtons[i].GetComponentInChildren<Text>().text = question.choices[i];
+            foreach (Button button in choicesButtons)
+            {
+                button.onClick.RemoveAllListeners();
+            }
 
-//                 int choiceIndex = i;
-//                 choicesButtons[i].onClick.AddListener(() =>
-//                 {
-//                     CheckAnswer(choiceIndex);
-//                 });
-//             }
-//         }
-//         else
-//         {
-//             Debug.LogError("The question is not of type QuestionMultipleChoice.");
-//         }
-//     }
+            for (int i = 0; i < choicesButtons.Length; i++)
+            {
+                choicesButtons[i].gameObject.SetActive(i < question.choices.Length);
+                choicesButtons[i].GetComponentInChildren<Text>().text = question.choices[i];
 
-//     void CheckAnswer(int choiceIndex)
-//     {
-//         var question = QData.Questions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
-//         if (question != null && choiceIndex == question.correctChoiceIndex)
-//         {
-//             score++;
-//             scoreText.text = "Score: " + score;
-//         }
+                int choiceIndex = i;
+                choicesButtons[i].onClick.AddListener(() =>
+                {
+                    CheckAnswer(choiceIndex);
+                });
+            }
+        }
+        else
+        {
+            Debug.LogError("The question is not of type QuestionMultipleChoice.");
+        }
+    }
 
-//         foreach (Button button in choicesButtons)
-//         {
-//             button.interactable = false;
-//         }
+    void CheckAnswer(int choiceIndex)
+    {
+        var question = QData.multipleChoiceQuestions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
 
-//         Player.GetComponent<PlayerMovement>().Move();
+        if (question != null && choiceIndex == question.correctChoiceIndex)
+        {
+            score++;
+            scoreText.text = "Score: " + score;
+        }
 
-//         StartCoroutine(Next());
-//     }
+        foreach (Button button in choicesButtons)
+        {
+            button.interactable = false;
+        }
 
-//     IEnumerator Next()
-//     {
-//         yield return new WaitForSeconds(1f);
+        Player.GetComponent<PlayerMovement>().Move();
 
-//         currentQuestionIndex++;
+        StartCoroutine(Next());
+    }
 
-//         if (currentQuestionIndex < QData.Questions.Count)
-//         {
-//             Reset();
-//         }
-//         else
-//         {
-//             float scorePercent = (float)score / QData.Questions.Count * 100;
-//             finalScoreText.text = $"Score: {scorePercent:F0}%";
+    IEnumerator Next()
+    {
+        yield return new WaitForSeconds(1f);
 
-//             if (scorePercent < 50)
-//                 finalScoreText.text += "\nStudy better next time!";
-//             else if (scorePercent < 60)
-//                 finalScoreText.text += "\nGood effort!";
-//             else if (scorePercent < 70)
-//                 finalScoreText.text += "\nWell done!";
-//             else if (scorePercent < 80)
-//                 finalScoreText.text += "\nGreat job!";
-//             else
-//                 finalScoreText.text += "\nExcellent!";
-//         }
-//     }
+        currentQuestionIndex++;
 
-//     public void Reset()
-//     {
-//         foreach (Button button in choicesButtons)
-//         {
-//             button.interactable = true;
-//         }
+        if (currentQuestionIndex < QData.multipleChoiceQuestions.Count)
+        {
+            Reset();
+        }
+        else
+        {
+            float scorePercent = (float)score / QData.multipleChoiceQuestions.Count * 100;
+            finalScoreText.text = $"Score: {scorePercent:F0}%";
 
-//         SetQuestion(currentQuestionIndex);
-//     }
-// }
+            if (scorePercent < 50)
+                finalScoreText.text += "\nStudy better next time!";
+            else if (scorePercent < 60)
+                finalScoreText.text += "\nGood effort!";
+            else if (scorePercent < 70)
+                finalScoreText.text += "\nWell done!";
+            else if (scorePercent < 80)
+                finalScoreText.text += "\nGreat job!";
+            else
+                finalScoreText.text += "\nExcellent!";
+        }
+    }
+
+    public void Reset()
+    {
+        foreach (Button button in choicesButtons)
+        {
+            button.interactable = true;
+        }
+
+        SetQuestion(currentQuestionIndex);
+    }
+}
