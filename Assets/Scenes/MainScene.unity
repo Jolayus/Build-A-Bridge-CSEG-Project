@@ -2527,12 +2527,14 @@ MonoBehaviour:
   questionText: {fileID: 535789409}
   scoreText: {fileID: 877085921}
   finalScoreText: {fileID: 0}
+  inputText: {fileID: 1001536915}
+  submitButton: {fileID: 464986356}
   choicesButtons:
   - {fileID: 2105819200}
   - {fileID: 949471415}
   - {fileID: 310115182}
   - {fileID: 515672677}
-  QData: {fileID: 11400000, guid: 4ac4ec1ba21d83e4a95f0acc554a7061, type: 2}
+  QData: {fileID: 0}
   Player: {fileID: 0}
 --- !u!1 &1237531978
 GameObject:

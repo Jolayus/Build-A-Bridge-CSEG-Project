@@ -8,6 +8,8 @@ public class QuestionManager : MonoBehaviour
     public Text questionText;
     public Text scoreText;
     public Text finalScoreText;
+    public InputField inputText;
+    public Button submitButton;
     public Button[] choicesButtons;
     public QuestionsData QData; // For the reference of Scriptable Object
 
@@ -18,15 +20,23 @@ public class QuestionManager : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.FindWithTag("Player");
-        if (QData != null && (QData.multipleChoiceQuestions.Count > 0 || QData.simpleQuestions.Count > 0))
-        {
-            SetQuestion(currentQuestionIndex);
-        }
-        else
-        {
-            Debug.LogError("QuestionsData is not assigned or contains no questions.");
-        }
+      // Retrieve the selected difficulty from GameSettings
+      string difficulty = GameSettings.selectedDifficulty;
+
+      // Use the difficulty in your game logic
+      Debug.Log("Selected Difficulty: " + difficulty);
+
+      Player = GameObject.FindWithTag("Player");
+      QData = Resources.Load<QuestionsData>("CSV DATA/QuestionData");
+
+      if (QData != null && (QData.multipleChoiceQuestions.Count > 0 || QData.simpleQuestions.Count > 0))
+      {
+          SetQuestion(currentQuestionIndex);
+      }
+      else
+      {
+          Debug.LogError("QuestionsData is not assigned or contains no questions.");
+      }
     }
 
     void SetQuestion(int CQIndex)
