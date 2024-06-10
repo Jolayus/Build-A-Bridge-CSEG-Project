@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,10 @@ public class QuestionManager : MonoBehaviour
     public Text finalScoreText;
     public Button[] choicesButtons;
     public QuestionsData QData; // For the reference of Scriptable Object
+
+    // Handling the currentHearts of the player
+    private int currentHearts = 3;
+    private GameObject[] hearts;
 
     public GameObject Player;
 
@@ -22,6 +27,8 @@ public class QuestionManager : MonoBehaviour
     {
         SetQuestion(currentQuestionIndex);
         Player = GameObject.FindWithTag("Player");
+
+        hearts = GameObject.FindGameObjectsWithTag("heart");
     }
 
     void SetQuestion(int CQIndex)
@@ -63,13 +70,20 @@ public class QuestionManager : MonoBehaviour
         }
         else
         {
-            foreach (Button button in choicesButtons)
-            {
-                button.interactable = false;
-            }
+            // Decrement the current hearts and destroy the UI (heart)
+            currentHearts--;
+            Destroy(hearts[hearts.Length - 1]);
+            hearts = hearts.Take(hearts.Count() - 1).ToArray();
 
+            if (currentHearts == 0) {
+                foreach (Button button in choicesButtons)
+                {
+                    button.interactable = false;
+                }
+            }
+            
             // Next Question
-            StartCoroutine(Next());
+            // StartCoroutine(Next());
         }
     }
 
