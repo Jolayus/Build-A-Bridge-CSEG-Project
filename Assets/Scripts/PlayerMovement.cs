@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private float jump = 3.3f;
     private bool isInitialJump = true;
 
+    public Animator animator;
+
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -28,8 +30,17 @@ public class PlayerMovement : MonoBehaviour
         // }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // If it collides with other game objects (platform)
+        animator.SetBool("IsJumping", false);
+    }
+
     public void Move()
     {
+        // Set the animation parameter IsJumping to transition the animation
+        animator.SetBool("IsJumping", true);
+
         rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
