@@ -948,6 +948,322 @@ MonoBehaviour:
     correctAnswer: Crocodile
     correctChoiceIndex: 0
   simpleQuestions:
+  - questionText: What do plants need to grow?
+    difficulty: EASY
+    correctAnswer: Water
+  - questionText: What is the hottest season of the year?
+    difficulty: EASY
+    correctAnswer: Summer
+  - questionText: What part of a plant absorbs water from the soil?
+    difficulty: EASY
+    correctAnswer: Root
+  - questionText: What falls from the sky during snowstorm?
+    difficulty: EASY
+    correctAnswer: Snow
+  - questionText: What tool do we use to measure temperature?
+    difficulty: EASY
+    correctAnswer: Thermometer
+  - questionText: What season comes after summer?
+    difficulty: EASY
+    correctAnswer: Fall
+  - questionText: Which planet do we live on?
+    difficulty: EASY
+    correctAnswer: Earth
+  - questionText: What is the center of our solar system?
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: "What is the earth\u2019s only natural satellite?"
+    difficulty: EASY
+    correctAnswer: Moon
+  - questionText: What do astronauts use to travel to space?
+    difficulty: EASY
+    correctAnswer: Spaceship
+  - questionText: What part of the body pumps blood?
+    difficulty: EASY
+    correctAnswer: Heart
+  - questionText: What do we use to see?
+    difficulty: EASY
+    correctAnswer: Eyes
+  - questionText: What helps us to hear?
+    difficulty: EASY
+    correctAnswer: Ears
+  - questionText: What do we use to taste food?
+    difficulty: EASY
+    correctAnswer: Tongue
+  - questionText: What is ice made of?
+    difficulty: EASY
+    correctAnswer: Water
+  - questionText: What state of matter is water?
+    difficulty: EASY
+    correctAnswer: Liquid
+  - questionText: What tool is used to measure weight?
+    difficulty: EASY
+    correctAnswer: Scale
+  - questionText: What force pulls everything towards the earth?
+    difficulty: EASY
+    correctAnswer: Gravity
+  - questionText: What kind of energy does the sun provide?
+    difficulty: EASY
+    correctAnswer: Solar
+  - questionText: What can magnets attract?
+    difficulty: EASY
+    correctAnswer: Metal
+  - questionText: What do we use to turn on a light?
+    difficulty: EASY
+    correctAnswer: Switch
+  - questionText: What do plants release into the air that we need to breathe?
+    difficulty: EASY
+    correctAnswer: Oxygen
+  - questionText: What is the process by which water changes from a liquid to a gas?
+    difficulty: EASY
+    correctAnswer: Evaporation
+  - questionText: What do bees collect from flowers to make honey?
+    difficulty: EASY
+    correctAnswer: Nectar
+  - questionText: What technique can be used to separate a mixture of sand and iron
+      filings?
+    difficulty: EASY
+    correctAnswer: Magnetic Separation
+  - questionText: What process can be used to separate a mixture of water and alcohol?
+    difficulty: EASY
+    correctAnswer: Distillation
+  - questionText: Which part of the plant is responsible for photosynthesis?
+    difficulty: EASY
+    correctAnswer: Leaves
+  - questionText: Which ecosystem is characterized by dense trees and high biodiversity?
+    difficulty: EASY
+    correctAnswer: Rainforest
+  - questionText: Which layer of the Earth is composed mostly of solid rock?
+    difficulty: EASY
+    correctAnswer: Crust
+  - questionText: Which form of energy is associated with the motion of objects?
+    difficulty: EASY
+    correctAnswer: Kinetic Energy
+  - questionText: What is the main source of energy for the Earth's climate system?
+    difficulty: EASY
+    correctAnswer: Solar Energy
+  - questionText: Which system in the human body is responsible for transporting
+      blood?
+    difficulty: EASY
+    correctAnswer: Circulatory system
+  - questionText: Which organ system includes the brain and spinal cord?
+    difficulty: EASY
+    correctAnswer: Nervous system
+  - questionText: Which process involves the conversion of sunlight into chemical
+      energy by plants?
+    difficulty: EASY
+    correctAnswer: Photosynthesis
+  - questionText: What word is given to a place that provides living things with
+      everything they need to survive?
+    difficulty: EASY
+    correctAnswer: Habitat
+  - questionText: 'What is the main component of weather? '
+    difficulty: EASY
+    correctAnswer: Temperature
+  - questionText: What type of cloud is associated with thunderstorms?
+    difficulty: EASY
+    correctAnswer: Cumulonimbus
+  - questionText: What is the term for the average weather conditions in an area
+      over a long period?
+    difficulty: EASY
+    correctAnswer: Climate
+  - questionText: What is the chemical symbol for water?
+    difficulty: EASY
+    correctAnswer: H2O
+  - questionText: Which state of matter has particles that are tightly packed and
+      vibrate in place?
+    difficulty: EASY
+    correctAnswer: Solid
+  - questionText: Which process changes a solid directly into a gas?
+    difficulty: EASY
+    correctAnswer: Sublimation
+  - questionText: What is the most abundant gas in the Earth's atmosphere?
+    difficulty: EASY
+    correctAnswer: Nitrogen
+  - questionText: Which layer of the Earth is liquid?
+    difficulty: EASY
+    correctAnswer: Outer core
+  - questionText: What type of rock is formed from molten lava?
+    difficulty: EASY
+    correctAnswer: Igneous
+  - questionText: Which natural disaster is caused by the movement of tectonic plates?
+    difficulty: EASY
+    correctAnswer: Earthquake
+  - questionText: Which vitamin is essential for strong bones?
+    difficulty: EASY
+    correctAnswer: Vitamin D
+  - questionText: What is the middle part of the Earth?
+    difficulty: EASY
+    correctAnswer: Mantle
+  - questionText: What is the name of the closest star to Earth?
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: Identify the planet known as the Red Planet.
+    difficulty: EASY
+    correctAnswer: Mars
+  - questionText: What is the largest planet in our solar system?
+    difficulty: EASY
+    correctAnswer: Jupiter
+  - questionText: Name the layer of gases surrounding Earth.
+    difficulty: EASY
+    correctAnswer: Atmosphere
+  - questionText: What is the hardest natural substance found on Earth?
+    difficulty: EASY
+    correctAnswer: Diamond
+  - questionText: What is the outer layer of skin called?
+    difficulty: EASY
+    correctAnswer: Epidermis
+  - questionText: Name the process by which a caterpillar transforms into a butterfly.
+    difficulty: EASY
+    correctAnswer: Metamorphosis
+  - questionText: Name the planet with the most rings.
+    difficulty: EASY
+    correctAnswer: Saturn
+  - questionText: Identify the body part used by birds for flying.
+    difficulty: EASY
+    correctAnswer: Wings
+  - questionText: What is the substance that gives plants their green color?
+    difficulty: EASY
+    correctAnswer: Chlorophyll
+  - questionText: Name the part of the plant responsible for anchoring it into the
+      ground.
+    difficulty: EASY
+    correctAnswer: Roots
+  - questionText: Identify the process by which rocks are broken down into smaller
+      pieces.
+    difficulty: EASY
+    correctAnswer: Weathering
+  - questionText: What is the name of the brightest star in the night sky?
+    difficulty: EASY
+    correctAnswer: Sirius
+  - questionText: Name the substance found in bones that makes them hard.
+    difficulty: EASY
+    correctAnswer: Calcium
+  - questionText: Identify the body part responsible for smelling.
+    difficulty: EASY
+    correctAnswer: Nose
+  - questionText: What is the layer of Earth's atmosphere that protects us from harmful
+      ultraviolet radiation?
+    difficulty: EASY
+    correctAnswer: Ozone Layer
+  - questionText: Name the body part that contains the brain.
+    difficulty: EASY
+    correctAnswer: Skull
+  - questionText: What is the process by which water returns to the atmosphere from
+      plants?
+    difficulty: EASY
+    correctAnswer: 'Transpiration '
+  - questionText: Name the organ responsible for filtering waste from the blood.
+    difficulty: EASY
+    correctAnswer: Kidneys
+  - questionText: Identify the natural disaster characterized by a violent rotating
+      column of air.
+    difficulty: EASY
+    correctAnswer: Tornado
+  - questionText: What is the substance found in plant cell walls that provides structure
+      and support?
+    difficulty: EASY
+    correctAnswer: Cellulose
+  - questionText: What do we call the change of state from a liquid to a solid?
+    difficulty: EASY
+    correctAnswer: Freezing
+  - questionText: Name the celestial body that Earth orbits around.
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: What is the force that resists motion when two objects rub against
+      each other?
+    difficulty: EASY
+    correctAnswer: Friction
+  - questionText: What is the substance that gives blood its red color?
+    difficulty: EASY
+    correctAnswer: Hemoglobin
+  - questionText: Name the layer of Earth's atmosphere where most weather phenomena
+      occur.
+    difficulty: EASY
+    correctAnswer: Troposphere
+  - questionText: Name the process by which an organism changes over time to better
+      adapt to its environment.
+    difficulty: EASY
+    correctAnswer: Evolution
+  - questionText: Name the organ responsible for producing insulin in the human body.
+    difficulty: EASY
+    correctAnswer: Pancreas
+  - questionText: Identify the planet known as the ""Morning Star.
+    difficulty: EASY
+    correctAnswer: Venus
+  - questionText: A male cow is called
+    difficulty: EASY
+    correctAnswer: Ox
+  - questionText: What part of the body helps you move?
+    difficulty: EASY
+    correctAnswer: Muscles
+  - questionText: The two holes of the nose are called?
+    difficulty: EASY
+    correctAnswer: Nostrils
+  - questionText: Legs have feet and arms have ___.
+    difficulty: EASY
+    correctAnswer: Hands
+  - questionText: What is the young one of a cow called?
+    difficulty: EASY
+    correctAnswer: Calf
+  - questionText: Dark rain clouds can give out lightning and ____.
+    difficulty: EASY
+    correctAnswer: Thunder
+  - questionText: Your hands have four fingers and a ____.
+    difficulty: EASY
+    correctAnswer: Thumb
+  - questionText: What is the boiling point of water?
+    difficulty: EASY
+    correctAnswer: "100\xB0C"
+  - questionText: Frog is a reptile or amphibian?
+    difficulty: EASY
+    correctAnswer: Amphibian
+  - questionText: When you push something, you apply ____.
+    difficulty: EASY
+    correctAnswer: Force
+  - questionText: Which group of animals have scales?
+    difficulty: EASY
+    correctAnswer: Reptiles
+  - questionText: Where does our food collect after we chew and swallow it?
+    difficulty: EASY
+    correctAnswer: Stomach
+  - questionText: "What is the name of a frog\u2019s young one?"
+    difficulty: EASY
+    correctAnswer: Tadpole
+  - questionText: What tissue connects muscles to bones?
+    difficulty: EASY
+    correctAnswer: Tendon
+  - questionText: Which nutrient plays an essential role in muscle-building?
+    difficulty: EASY
+    correctAnswer: Protein
+  - questionText: Plants need which gas to perform photosynthesis?
+    difficulty: EASY
+    correctAnswer: Carbon dioxide
+  - questionText: Similar body cells group together to form a ___.
+    difficulty: EASY
+    correctAnswer: Tissue
+  - questionText: The standard unit of measurement for energy is ____.
+    difficulty: EASY
+    correctAnswer: Joule
+  - questionText: What are animals, which eat both plants and animals, called?
+    difficulty: EASY
+    correctAnswer: Omnivores
+  - questionText: Where would you be most likely to find a worm?
+    difficulty: EASY
+    correctAnswer: Soil
+  - questionText: What is the largest organ in the human body?
+    difficulty: EASY
+    correctAnswer: Skin
+  - questionText: 'Which type of animal lays eggs: mammals or reptiles?'
+    difficulty: EASY
+    correctAnswer: Reptiles
+  - questionText: How many planets are there in our solar system?
+    difficulty: EASY
+    correctAnswer: 8
+  - questionText: 'What is the name of the phenomenon where the Moon partially or
+      completely covers the Sun? '
+    difficulty: EASY
+    correctAnswer: Solar Eclipse
   - questionText: What is the most important sign of an impending volcanic eruption
       which is also referred as seismic activity?
     difficulty: MEDIUM
@@ -1296,319 +1612,3 @@ MonoBehaviour:
   - questionText: 'Urine is excreted by the '
     difficulty: MEDIUM
     correctAnswer: Kidney
-  - questionText: What do plants need to grow?
-    difficulty: EASY
-    correctAnswer: Water
-  - questionText: What is the hottest season of the year?
-    difficulty: EASY
-    correctAnswer: Summer
-  - questionText: What part of a plant absorbs water from the soil?
-    difficulty: EASY
-    correctAnswer: Root
-  - questionText: What falls from the sky during snowstorm?
-    difficulty: EASY
-    correctAnswer: Snow
-  - questionText: What tool do we use to measure temperature?
-    difficulty: EASY
-    correctAnswer: Thermometer
-  - questionText: What season comes after summer?
-    difficulty: EASY
-    correctAnswer: Fall
-  - questionText: Which planet do we live on?
-    difficulty: EASY
-    correctAnswer: Earth
-  - questionText: What is the center of our solar system?
-    difficulty: EASY
-    correctAnswer: Sun
-  - questionText: "What is the earth\u2019s only natural satellite?"
-    difficulty: EASY
-    correctAnswer: Moon
-  - questionText: What do astronauts use to travel to space?
-    difficulty: EASY
-    correctAnswer: Spaceship
-  - questionText: What part of the body pumps blood?
-    difficulty: EASY
-    correctAnswer: Heart
-  - questionText: What do we use to see?
-    difficulty: EASY
-    correctAnswer: Eyes
-  - questionText: What helps us to hear?
-    difficulty: EASY
-    correctAnswer: Ears
-  - questionText: What do we use to taste food?
-    difficulty: EASY
-    correctAnswer: Tongue
-  - questionText: What is ice made of?
-    difficulty: EASY
-    correctAnswer: Water
-  - questionText: What state of matter is water?
-    difficulty: EASY
-    correctAnswer: Liquid
-  - questionText: What tool is used to measure weight?
-    difficulty: EASY
-    correctAnswer: Scale
-  - questionText: What force pulls everything towards the earth?
-    difficulty: EASY
-    correctAnswer: Gravity
-  - questionText: What kind of energy does the sun provide?
-    difficulty: EASY
-    correctAnswer: Solar
-  - questionText: What can magnets attract?
-    difficulty: EASY
-    correctAnswer: Metal
-  - questionText: What do we use to turn on a light?
-    difficulty: EASY
-    correctAnswer: Switch
-  - questionText: What do plants release into the air that we need to breathe?
-    difficulty: EASY
-    correctAnswer: Oxygen
-  - questionText: What is the process by which water changes from a liquid to a gas?
-    difficulty: EASY
-    correctAnswer: Evaporation
-  - questionText: What do bees collect from flowers to make honey?
-    difficulty: EASY
-    correctAnswer: Nectar
-  - questionText: What technique can be used to separate a mixture of sand and iron
-      filings?
-    difficulty: EASY
-    correctAnswer: Magnetic Separation
-  - questionText: What process can be used to separate a mixture of water and alcohol?
-    difficulty: EASY
-    correctAnswer: Distillation
-  - questionText: Which part of the plant is responsible for photosynthesis?
-    difficulty: EASY
-    correctAnswer: Leaves
-  - questionText: Which ecosystem is characterized by dense trees and high biodiversity?
-    difficulty: EASY
-    correctAnswer: Rainforest
-  - questionText: Which layer of the Earth is composed mostly of solid rock?
-    difficulty: EASY
-    correctAnswer: Crust
-  - questionText: Which form of energy is associated with the motion of objects?
-    difficulty: EASY
-    correctAnswer: Kinetic Energy
-  - questionText: What is the main source of energy for the Earth's climate system?
-    difficulty: EASY
-    correctAnswer: Solar Energy
-  - questionText: Which system in the human body is responsible for transporting
-      blood?
-    difficulty: EASY
-    correctAnswer: Circulatory system
-  - questionText: Which organ system includes the brain and spinal cord?
-    difficulty: EASY
-    correctAnswer: Nervous system
-  - questionText: Which process involves the conversion of sunlight into chemical
-      energy by plants?
-    difficulty: EASY
-    correctAnswer: Photosynthesis
-  - questionText: What word is given to a place that provides living things with
-      everything they need to survive?
-    difficulty: EASY
-    correctAnswer: Habitat
-  - questionText: 'What is the main component of weather? '
-    difficulty: EASY
-    correctAnswer: Temperature
-  - questionText: What type of cloud is associated with thunderstorms?
-    difficulty: EASY
-    correctAnswer: Cumulonimbus
-  - questionText: What is the term for the average weather conditions in an area
-      over a long period?
-    difficulty: EASY
-    correctAnswer: Climate
-  - questionText: What is the chemical symbol for water?
-    difficulty: EASY
-    correctAnswer: H2O
-  - questionText: Which state of matter has particles that are tightly packed and
-      vibrate in place?
-    difficulty: EASY
-    correctAnswer: Solid
-  - questionText: Which process changes a solid directly into a gas?
-    difficulty: EASY
-    correctAnswer: Sublimation
-  - questionText: What is the most abundant gas in the Earth's atmosphere?
-    difficulty: EASY
-    correctAnswer: Nitrogen
-  - questionText: Which layer of the Earth is liquid?
-    difficulty: EASY
-    correctAnswer: Outer core
-  - questionText: What type of rock is formed from molten lava?
-    difficulty: EASY
-    correctAnswer: Igneous
-  - questionText: Which natural disaster is caused by the movement of tectonic plates?
-    difficulty: EASY
-    correctAnswer: Earthquake
-  - questionText: Which vitamin is essential for strong bones?
-    difficulty: EASY
-    correctAnswer: Vitamin D
-  - questionText: What is the middle part of the Earth?
-    difficulty: EASY
-    correctAnswer: Mantle
-  - questionText: What is the name of the closest star to Earth?
-    difficulty: EASY
-    correctAnswer: Sun
-  - questionText: Identify the planet known as the Red Planet.
-    difficulty: EASY
-    correctAnswer: Mars
-  - questionText: What is the largest planet in our solar system?
-    difficulty: EASY
-    correctAnswer: Jupiter
-  - questionText: Name the layer of gases surrounding Earth.
-    difficulty: EASY
-    correctAnswer: Atmosphere
-  - questionText: What is the hardest natural substance found on Earth?
-    difficulty: EASY
-    correctAnswer: Diamond
-  - questionText: What is the outer layer of skin called?
-    difficulty: EASY
-    correctAnswer: Epidermis
-  - questionText: Name the process by which a caterpillar transforms into a butterfly.
-    difficulty: EASY
-    correctAnswer: Metamorphosis
-  - questionText: Name the planet with the most rings.
-    difficulty: EASY
-    correctAnswer: Saturn
-  - questionText: Identify the body part used by birds for flying.
-    difficulty: EASY
-    correctAnswer: Wings
-  - questionText: What is the substance that gives plants their green color?
-    difficulty: EASY
-    correctAnswer: Chlorophyll
-  - questionText: Name the part of the plant responsible for anchoring it into the
-      ground.
-    difficulty: EASY
-    correctAnswer: Roots
-  - questionText: Identify the process by which rocks are broken down into smaller
-      pieces.
-    difficulty: EASY
-    correctAnswer: Weathering
-  - questionText: What is the name of the brightest star in the night sky?
-    difficulty: EASY
-    correctAnswer: Sirius
-  - questionText: Name the substance found in bones that makes them hard.
-    difficulty: EASY
-    correctAnswer: Calcium
-  - questionText: Identify the body part responsible for smelling.
-    difficulty: EASY
-    correctAnswer: Nose
-  - questionText: What is the layer of Earth's atmosphere that protects us from harmful
-      ultraviolet radiation?
-    difficulty: EASY
-    correctAnswer: Ozone Layer
-  - questionText: Name the body part that contains the brain.
-    difficulty: EASY
-    correctAnswer: Skull
-  - questionText: What is the process by which water returns to the atmosphere from
-      plants?
-    difficulty: EASY
-    correctAnswer: 'Transpiration '
-  - questionText: Name the organ responsible for filtering waste from the blood.
-    difficulty: EASY
-    correctAnswer: Kidneys
-  - questionText: Identify the natural disaster characterized by a violent rotating
-      column of air.
-    difficulty: EASY
-    correctAnswer: Tornado
-  - questionText: What is the substance found in plant cell walls that provides structure
-      and support?
-    difficulty: EASY
-    correctAnswer: Cellulose
-  - questionText: What do we call the change of state from a liquid to a solid?
-    difficulty: EASY
-    correctAnswer: Freezing
-  - questionText: Name the celestial body that Earth orbits around.
-    difficulty: EASY
-    correctAnswer: Sun
-  - questionText: What is the force that resists motion when two objects rub against
-      each other?
-    difficulty: EASY
-    correctAnswer: Friction
-  - questionText: What is the substance that gives blood its red color?
-    difficulty: EASY
-    correctAnswer: Hemoglobin
-  - questionText: Name the layer of Earth's atmosphere where most weather phenomena
-      occur.
-    difficulty: EASY
-    correctAnswer: Troposphere
-  - questionText: Name the process by which an organism changes over time to better
-      adapt to its environment.
-    difficulty: EASY
-    correctAnswer: Evolution
-  - questionText: Name the organ responsible for producing insulin in the human body.
-    difficulty: EASY
-    correctAnswer: Pancreas
-  - questionText: Identify the planet known as the ""Morning Star.
-    difficulty: EASY
-    correctAnswer: Venus
-  - questionText: A male cow is called
-    difficulty: EASY
-    correctAnswer: Ox
-  - questionText: What part of the body helps you move?
-    difficulty: EASY
-    correctAnswer: Muscles
-  - questionText: The two holes of the nose are called?
-    difficulty: EASY
-    correctAnswer: Nostrils
-  - questionText: Legs have feet and arms have ___.
-    difficulty: EASY
-    correctAnswer: Hands
-  - questionText: What is the young one of a cow called?
-    difficulty: EASY
-    correctAnswer: Calf
-  - questionText: Dark rain clouds can give out lightning and ____.
-    difficulty: EASY
-    correctAnswer: Thunder
-  - questionText: Your hands have four fingers and a ____.
-    difficulty: EASY
-    correctAnswer: Thumb
-  - questionText: What is the boiling point of water?
-    difficulty: EASY
-    correctAnswer: "100\xB0C"
-  - questionText: Frog is a reptile or amphibian?
-    difficulty: EASY
-    correctAnswer: Amphibian
-  - questionText: When you push something, you apply ____.
-    difficulty: EASY
-    correctAnswer: Force
-  - questionText: Which group of animals have scales?
-    difficulty: EASY
-    correctAnswer: Reptiles
-  - questionText: Where does our food collect after we chew and swallow it?
-    difficulty: EASY
-    correctAnswer: Stomach
-  - questionText: "What is the name of a frog\u2019s young one?"
-    difficulty: EASY
-    correctAnswer: Tadpole
-  - questionText: What tissue connects muscles to bones?
-    difficulty: EASY
-    correctAnswer: Tendon
-  - questionText: Which nutrient plays an essential role in muscle-building?
-    difficulty: EASY
-    correctAnswer: Protein
-  - questionText: Plants need which gas to perform photosynthesis?
-    difficulty: EASY
-    correctAnswer: Carbon dioxide
-  - questionText: Similar body cells group together to form a ___.
-    difficulty: EASY
-    correctAnswer: Tissue
-  - questionText: The standard unit of measurement for energy is ____.
-    difficulty: EASY
-    correctAnswer: Joule
-  - questionText: What are animals, which eat both plants and animals, called?
-    difficulty: EASY
-    correctAnswer: Omnivores
-  - questionText: Where would you be most likely to find a worm?
-    difficulty: EASY
-    correctAnswer: Soil
-  - questionText: What is the largest organ in the human body?
-    difficulty: EASY
-    correctAnswer: Skin
-  - questionText: 'Which type of animal lays eggs: mammals or reptiles?'
-    difficulty: EASY
-    correctAnswer: Reptiles
-  - questionText: How many planets are there in our solar system?
-    difficulty: EASY
-    correctAnswer: 8
-  - questionText: 'What is the name of the phenomenon where the Moon partially or
-      completely covers the Sun? '
-    difficulty: EASY
-    correctAnswer: Solar Eclipse

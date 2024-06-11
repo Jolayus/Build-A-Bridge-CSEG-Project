@@ -1,118 +1,213 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-// public class QuestionManager : MonoBehaviour
-// {
-//     public Text questionText;
-//     public Text scoreText;
-//     public Text finalScoreText;
-//     public Button[] choicesButtons;
-//     public QuestionsData QData; // For the reference of Scriptable Object
+public class QuestionManager : MonoBehaviour
+{
+    public Text questionText;
+    public Text scoreText;
+    public Text finalScoreText;
+    public InputField inputText;
+    public Button submitButton;
+    public Button[] choicesButtons;
 
-//     public GameObject Player;
+    public QuestionsData QData; 
 
-//     private int currentQuestionIndex = 0;
-//     private int score = 0;
+    public GameObject MultipleChoice;
+    public GameObject InputAndSubmit;
+    public GameObject Player;
 
-//     void Start()
-//     {
-//         Player = GameObject.FindWithTag("Player");
-//         if (QData != null && QData.Questions.Count > 0)
-//         {
-//             SetQuestion(currentQuestionIndex);
-//         }
-//         else
-//         {
-//             Debug.LogError("QuestionsData is not assigned or contains no questions.");
-//         }
-//     }
+    private int currentQuestionIndex;
+    private int questionCount = 0;
+    private int score = 0;
+    private string difficulty;
+    private QuestionsData temporaryQuestionsData;
 
-//     void SetQuestion(int CQIndex)
-//     {
-//         var question = QData.Questions[CQIndex] as QuestionsData.QuestionMultipleChoice;
-//         if (question != null)
-//         {
-//             questionText.text = question.questionText;
+    void Start()
+    {
+        QData = Resources.Load<QuestionsData>("CSV DATA/QuestionData");
 
-//             foreach (Button button in choicesButtons)
-//             {
-//                 button.onClick.RemoveAllListeners();
-//             }
+        Player = GameObject.FindWithTag("Player");
 
-//             for (int i = 0; i < choicesButtons.Length; i++)
-//             {
-//                 choicesButtons[i].gameObject.SetActive(i < question.choices.Length);
-//                 choicesButtons[i].GetComponentInChildren<Text>().text = question.choices[i];
+        difficulty = GameSettings.selectedDifficulty;
 
-//                 int choiceIndex = i;
-//                 choicesButtons[i].onClick.AddListener(() =>
-//                 {
-//                     CheckAnswer(choiceIndex);
-//                 });
-//             }
-//         }
-//         else
-//         {
-//             Debug.LogError("The question is not of type QuestionMultipleChoice.");
-//         }
-//     }
+        CreateTemporaryQuestionsList(difficulty.ToLower());
 
-//     void CheckAnswer(int choiceIndex)
-//     {
-//         var question = QData.Questions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
-//         if (question != null && choiceIndex == question.correctChoiceIndex)
-//         {
-//             score++;
-//             scoreText.text = "Score: " + score;
-//         }
+        if (temporaryQuestionsData != null)
+        {
+            SetQuestion();
+        }
+        else
+        {
+            Debug.LogError("Temporary questions list contains no questions.");
+        }
+    }
 
-//         foreach (Button button in choicesButtons)
-//         {
-//             button.interactable = false;
-//         }
+    void SetQuestion()
+    {
+        if (difficulty.ToLower().Contains("easy") || difficulty.ToLower().Contains("medium"))
+        {
+            InputAndSubmit.SetActive(true);
+            MultipleChoice.SetActive(false);
 
-//         Player.GetComponent<PlayerMovement>().Move();
+            questionCount = temporaryQuestionsData.simpleQuestions.Count;
 
-//         StartCoroutine(Next());
-//     }
+            currentQuestionIndex = Random.Range(0, questionCount);
 
-//     IEnumerator Next()
-//     {
-//         yield return new WaitForSeconds(1f);
+            var SQuestion = temporaryQuestionsData.simpleQuestions[currentQuestionIndex] as QuestionsData.QuestionSimple;
 
-//         currentQuestionIndex++;
+            if (SQuestion != null)
+            {
+                questionText.text = SQuestion.questionText;
 
-//         if (currentQuestionIndex < QData.Questions.Count)
-//         {
-//             Reset();
-//         }
-//         else
-//         {
-//             float scorePercent = (float)score / QData.Questions.Count * 100;
-//             finalScoreText.text = $"Score: {scorePercent:F0}%";
+                submitButton.onClick.RemoveAllListeners();
 
-//             if (scorePercent < 50)
-//                 finalScoreText.text += "\nStudy better next time!";
-//             else if (scorePercent < 60)
-//                 finalScoreText.text += "\nGood effort!";
-//             else if (scorePercent < 70)
-//                 finalScoreText.text += "\nWell done!";
-//             else if (scorePercent < 80)
-//                 finalScoreText.text += "\nGreat job!";
-//             else
-//                 finalScoreText.text += "\nExcellent!";
-//         }
-//     }
+                submitButton.onClick.AddListener(() =>
+                {
+                    CheckAnswer();
+                });
+            }
+            else
+            {
+                Debug.LogError("The question is not of type QuestionSimple.");
+            }
+        }
+        else if (difficulty.ToLower().Contains("hard"))
+        {
+            InputAndSubmit.SetActive(false);
+            MultipleChoice.SetActive(true);
 
-//     public void Reset()
-//     {
-//         foreach (Button button in choicesButtons)
-//         {
-//             button.interactable = true;
-//         }
+            questionCount = temporaryQuestionsData.multipleChoiceQuestions.Count;
 
-//         SetQuestion(currentQuestionIndex);
-//     }
-// }
+            currentQuestionIndex = Random.Range(0, questionCount);
+
+            var MQuestion = temporaryQuestionsData.multipleChoiceQuestions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
+
+            if (MQuestion != null)
+            {
+                questionText.text = MQuestion.questionText;
+
+                foreach (Button button in choicesButtons)
+                {
+                    button.onClick.RemoveAllListeners();
+                }
+
+                for (int i = 0; i < choicesButtons.Length; i++)
+                {
+                    choicesButtons[i].gameObject.SetActive(i < MQuestion.choices.Length);
+                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[i];
+
+                    int choiceIndex = i;
+                    choicesButtons[i].onClick.AddListener(() =>
+                    {
+                        CheckAnswer(choiceIndex);
+                    });
+                }
+            }
+            else
+            {
+                Debug.LogError("The question is not of type QuestionMultipleChoice.");
+            }
+
+
+        }
+        else
+        {
+            Debug.LogError("Invalid difficulty selected.");
+        }
+    }
+
+    void CheckAnswer()
+    {
+        var question = temporaryQuestionsData.simpleQuestions[currentQuestionIndex] as QuestionsData.QuestionSimple;
+
+        if (question != null && inputText.text.ToLower() == question.correctAnswer.ToLower())
+        {
+            score++;
+            scoreText.text = "Score: " + score;
+        }
+
+        submitButton.interactable = false;
+
+        temporaryQuestionsData.simpleQuestions.RemoveAt(currentQuestionIndex); // Move to the if statement
+
+        Player.GetComponent<PlayerMovement>().Move();
+
+        StartCoroutine(Next());
+    }
+
+    void CheckAnswer(int choiceIndex)
+    {
+        var question = temporaryQuestionsData.multipleChoiceQuestions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
+
+        if (question != null && choiceIndex == question.correctChoiceIndex)
+        {
+            score++;
+            scoreText.text = "Score: " + score;
+        }
+
+        foreach (Button button in choicesButtons)
+        {
+            button.interactable = false;
+        }
+
+        temporaryQuestionsData.multipleChoiceQuestions.RemoveAt(currentQuestionIndex); // Move to the if statement
+
+        Player.GetComponent<PlayerMovement>().Move();
+
+        StartCoroutine(Next());
+    }
+
+    IEnumerator Next()
+    {
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log(temporaryQuestionsData.multipleChoiceQuestions.Count);
+        Debug.Log(temporaryQuestionsData.simpleQuestions.Count);
+
+        questionCount--;
+
+        currentQuestionIndex = Random.Range(0, questionCount);
+        
+        Reset();
+    }
+
+    void CreateTemporaryQuestionsList(string difficulty)
+    {
+        // Initialize a new instance of QuestionsData for the temporary list
+        temporaryQuestionsData = ScriptableObject.CreateInstance<QuestionsData>();
+
+        // Filter and add multiple choice questions based on difficulty
+        foreach (var mcQuestion in QData.multipleChoiceQuestions)
+        {
+            if (mcQuestion.difficulty.ToLower() == difficulty)
+            {
+                temporaryQuestionsData.multipleChoiceQuestions.Add(mcQuestion);
+            }
+        }
+
+        // Filter and add simple questions based on difficulty
+        foreach (var simpleQuestion in QData.simpleQuestions)
+        {
+            if (simpleQuestion.difficulty.ToLower() == difficulty)
+            {
+                temporaryQuestionsData.simpleQuestions.Add(simpleQuestion);
+            }
+        }
+
+        Debug.Log("Temporary questions list created with difficulty: " + difficulty);
+    }
+
+    void Reset()
+    {
+        foreach (Button button in choicesButtons)
+        {
+            button.interactable = true;
+        }
+
+        submitButton.interactable = true;
+
+        SetQuestion();
+    }
+}
