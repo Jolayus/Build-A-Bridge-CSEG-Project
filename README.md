@@ -27,7 +27,7 @@ git clone https://github.com/Jolayus/Build-A-Bridge-CSEG-Project.git
 
 ## Contributing
 
-Create your own branch, "development-branch-<contributor_name>"
+Create your own branch, "development-branch-<contributor_name>-<issue_number>"
 Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 

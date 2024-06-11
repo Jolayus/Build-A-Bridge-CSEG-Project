@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    public float jump;
+    private float speed = 1.7f;
+    private float jump = 3.3f;
+    private bool isInitialJump = true;
+
+    public Animator animator;
 
     public Rigidbody2D rb;
 
@@ -27,9 +30,23 @@ public class PlayerMovement : MonoBehaviour
         // }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // If it collides with other game objects (platform)
+        animator.SetBool("IsJumping", false);
+    }
+
     public void Move()
     {
+        // Set the animation parameter IsJumping to transition the animation
+        animator.SetBool("IsJumping", true);
+
         rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
         rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        if (isInitialJump) {
+            isInitialJump = false;
+            speed = 1.5f;
+        }
     }
 }

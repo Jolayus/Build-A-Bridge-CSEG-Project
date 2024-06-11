@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,10 @@ public class QuestionManager : MonoBehaviour
     public GameObject MultipleChoice;
     public GameObject InputAndSubmit;
     public GameObject Player;
+    
+    // Handling the currentHearts of the player
+    private int currentHearts = 3;
+    private GameObject[] hearts;
 
     private int currentQuestionIndex;
     private int questionCount = 0;
@@ -29,6 +34,8 @@ public class QuestionManager : MonoBehaviour
         QData = Resources.Load<QuestionsData>("CSV DATA/QuestionData");
 
         Player = GameObject.FindWithTag("Player");
+
+        hearts = GameObject.FindGameObjectsWithTag("heart");
 
         difficulty = GameSettings.selectedDifficulty;
 
@@ -133,6 +140,18 @@ public class QuestionManager : MonoBehaviour
         temporaryQuestionsData.simpleQuestions.RemoveAt(currentQuestionIndex); // Move to the if statement
 
         Player.GetComponent<PlayerMovement>().Move();
+        
+        // Decrement the current hearts and destroy the UI (heart)
+        currentHearts--;
+        Destroy(hearts[hearts.Length - 1]);
+        hearts = hearts.Take(hearts.Count() - 1).ToArray();
+
+        if (currentHearts == 0) {
+            foreach (Button button in choicesButtons)
+            {
+                button.interactable = false;
+            }
+        }
 
         StartCoroutine(Next());
     }
@@ -155,6 +174,18 @@ public class QuestionManager : MonoBehaviour
         temporaryQuestionsData.multipleChoiceQuestions.RemoveAt(currentQuestionIndex); // Move to the if statement
 
         Player.GetComponent<PlayerMovement>().Move();
+        
+        // Decrement the current hearts and destroy the UI (heart)
+        currentHearts--;
+        Destroy(hearts[hearts.Length - 1]);
+        hearts = hearts.Take(hearts.Count() - 1).ToArray();
+
+        if (currentHearts == 0) {
+            foreach (Button button in choicesButtons)
+            {
+                button.interactable = false;
+            }
+        }
 
         StartCoroutine(Next());
     }
