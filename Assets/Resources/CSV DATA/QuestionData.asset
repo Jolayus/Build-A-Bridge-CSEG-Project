@@ -1,0 +1,1614 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e451714d868a90e4cab31a8f78e72d7f, type: 3}
+  m_Name: QuestionData
+  m_EditorClassIdentifier: 
+  multipleChoiceQuestions:
+  - questionText: A hard rock called _____ comes from loose volcanic ash, which becomes
+      cemented together.
+    difficulty: HARD
+    choices:
+    - Tuff
+    - Granite
+    - Basalt
+    - Obsidian
+    correctAnswer: Tuff
+    correctChoiceIndex: 0
+  - questionText: This is a natural phenomenon characterized by the eruption of super
+      hot water and steam from bedrock.
+    difficulty: HARD
+    choices:
+    - Geyser
+    - Earthquake
+    - Volcano
+    - Tsunami
+    correctAnswer: Geyser
+    correctChoiceIndex: 0
+  - questionText: This type of volcano is usually formed from ashes and other materials
+      thrown high up into the air before they can spread further.
+    difficulty: HARD
+    choices:
+    - Cinder Cone
+    - Shield Volcano
+    - Composite Volcano
+    - Lava Dome
+    correctAnswer: Cinder Cone
+    correctChoiceIndex: 0
+  - questionText: Name the metal used in the making of microchips.
+    difficulty: HARD
+    choices:
+    - Silicon
+    - Aluminum
+    - Gold
+    - Copper
+    correctAnswer: Silicon
+    correctChoiceIndex: 0
+  - questionText: 'What is the element with a minimum atomic number of 8 electrons
+      in its outermost shell? '
+    difficulty: HARD
+    choices:
+    - Neon
+    - Oxygen
+    - Fluorine
+    - Argon
+    correctAnswer: Neon
+    correctChoiceIndex: 0
+  - questionText: How many species of elephants are there?
+    difficulty: HARD
+    choices:
+    - 3
+    - 2
+    - 5
+    - 6
+    correctAnswer: 3
+    correctChoiceIndex: 0
+  - questionText: What type of macromolecule are enzymes?
+    difficulty: HARD
+    choices:
+    - Proteins
+    - Carbohydrates
+    - Lipids
+    - Nucleic acids
+    correctAnswer: Proteins
+    correctChoiceIndex: 0
+  - questionText: What process involves the division of a diploid cell into haploid
+      gametes?
+    difficulty: HARD
+    choices:
+    - Meiosis
+    - Mitosis
+    - Cytokinesis
+    - Binary Fission
+    correctAnswer: Meiosis
+    correctChoiceIndex: 0
+  - questionText: What is the chemical formula for sulfuric acid?
+    difficulty: HARD
+    choices:
+    - H2SO4
+    - HCI
+    - H2SO3
+    - HNO3
+    correctAnswer: H2SO4
+    correctChoiceIndex: 0
+  - questionText: "What is the pH of a neutral solution at 25\xB0C?"
+    difficulty: HARD
+    choices:
+    - 7
+    - 10
+    - 4
+    - 0
+    correctAnswer: 7
+    correctChoiceIndex: 0
+  - questionText: "Name the world\u2019s largest reef system."
+    difficulty: HARD
+    choices:
+    - Great Barrier Reef
+    - Belize Barrier Reef
+    - Maldives Coral Reef
+    - Red Sea Coral Reef
+    correctAnswer: Great Barrier Reef
+    correctChoiceIndex: 0
+  - questionText: 'E = mc2 is an equation which deals with:'
+    difficulty: HARD
+    choices:
+    - Theory of special relativity
+    - Quantum Field Theory
+    - Law of inertia
+    - Theory of general relativity
+    correctAnswer: Theory of special relativity
+    correctChoiceIndex: 0
+  - questionText: 'The layer of the atmosphere in which weather occurs is called
+      the:'
+    difficulty: HARD
+    choices:
+    - Troposphere
+    - Stratosphere
+    - Mesosphere
+    - Ionosphere
+    correctAnswer: Troposphere
+    correctChoiceIndex: 0
+  - questionText: Which is the rarest blood type in humans?
+    difficulty: HARD
+    choices:
+    - AB Negative
+    - O
+    - A
+    - B
+    correctAnswer: AB Negative
+    correctChoiceIndex: 0
+  - questionText: "What is the instrument \u2018barometer\u2019 used to measure? "
+    difficulty: HARD
+    choices:
+    - Atmospheric Pressure
+    - Temperature
+    - Humidity
+    - Wind speed
+    correctAnswer: Atmospheric Pressure
+    correctChoiceIndex: 0
+  - questionText: Which of the following technological developments came first?
+    difficulty: HARD
+    choices:
+    - Telescope
+    - Telephone
+    - Telegraph
+    - Teletype
+    correctAnswer: Telescope
+    correctChoiceIndex: 0
+  - questionText: What mammal lays eggs?
+    difficulty: HARD
+    choices:
+    - Platypus
+    - Kangaroo
+    - Dolphin
+    - Koala
+    correctAnswer: Platypus
+    correctChoiceIndex: 0
+  - questionText: What yellow metal is an alloy of copper and zinc?
+    difficulty: HARD
+    choices:
+    - Brass
+    - 'Gold '
+    - Silver
+    - Bronze
+    correctAnswer: Brass
+    correctChoiceIndex: 0
+  - questionText: What poisonous alkaloid is extracted from tobacco leaves and widely
+      used as an insecticide?
+    difficulty: HARD
+    choices:
+    - Nicotine
+    - Caffeine
+    - Cocaine
+    - Morphine
+    correctAnswer: Nicotine
+    correctChoiceIndex: 0
+  - questionText: 'The science of weights and measures is called:'
+    difficulty: HARD
+    choices:
+    - Metrology
+    - Geology
+    - Meteorology
+    - Biotechnology
+    correctAnswer: Metrology
+    correctChoiceIndex: 0
+  - questionText: What compound is a common component of air pollution, but is essential
+      in the upper atmosphere to protect life on earth?
+    difficulty: HARD
+    choices:
+    - Ozone
+    - 'Carbon Dioxide '
+    - Sulfur Dioxide
+    - Nitrogen Dioxide
+    correctAnswer: Ozone
+    correctChoiceIndex: 0
+  - questionText: The art of growing dwarfed trees in small pots, a technique perfected
+      by the Japanese, is known as what?
+    difficulty: HARD
+    choices:
+    - Bonsai
+    - Origami
+    - Haiku
+    - Ikebana
+    correctAnswer: Bonsai
+    correctChoiceIndex: 0
+  - questionText: What do you produce by adding Lactobacillus Bulgaricus to milk?
+    difficulty: HARD
+    choices:
+    - Yogurt
+    - Sour cream
+    - 'Butter '
+    - Cheese
+    correctAnswer: Yogurt
+    correctChoiceIndex: 0
+  - questionText: What vitamin complex includes thiamine, niacin, and riboflavin?
+    difficulty: HARD
+    choices:
+    - Vitamin B
+    - Vitamin C
+    - Vitamin A
+    - Vitamin D
+    correctAnswer: Vitamin B
+    correctChoiceIndex: 0
+  - questionText: 'Plants get their nitrogen from:'
+    difficulty: HARD
+    choices:
+    - Soil
+    - Sunlight
+    - Water
+    - Air
+    correctAnswer: Soil
+    correctChoiceIndex: 0
+  - questionText: One metal dissolved in another is called
+    difficulty: HARD
+    choices:
+    - Alloy
+    - Compound
+    - Mixture
+    - Solution
+    correctAnswer: Alloy
+    correctChoiceIndex: 0
+  - questionText: A thermocouple is used to measure
+    difficulty: HARD
+    choices:
+    - Temperature
+    - Atmospheric pressure
+    - Humidity
+    - Voltage
+    correctAnswer: Temperature
+    correctChoiceIndex: 0
+  - questionText: What form of radiation most closely resembles X-rays?
+    difficulty: HARD
+    choices:
+    - Gamma
+    - Ultraviolet radiation
+    - Microwaves
+    - Infrared radiation
+    correctAnswer: Gamma
+    correctChoiceIndex: 0
+  - questionText: How many time zones are there on Earth?
+    difficulty: HARD
+    choices:
+    - 24
+    - 26
+    - 12
+    - 20
+    correctAnswer: 24
+    correctChoiceIndex: 0
+  - questionText: What colorless, pungent gas is often dissolved in water to yield
+      a solution that is used as a biological preservative?
+    difficulty: HARD
+    choices:
+    - Formaldehyde
+    - Carbon Monoxide
+    - Hydrogen Sulfide
+    - Nitrous oxide
+    correctAnswer: Formaldehyde
+    correctChoiceIndex: 0
+  - questionText: 'The branch of medical science which is concerned with the study
+      of disease as it affects a community of people is called:'
+    difficulty: HARD
+    choices:
+    - Epidemiology
+    - Pharmacology
+    - Pathology
+    - Oncology
+    correctAnswer: Epidemiology
+    correctChoiceIndex: 0
+  - questionText: 'The study of how people use tools to perform work and how people
+      physically relate to their working environment is called:'
+    difficulty: HARD
+    choices:
+    - Ergonomics
+    - Psychology
+    - Anthropology
+    - Sociology
+    correctAnswer: Ergonomics
+    correctChoiceIndex: 0
+  - questionText: Name the medical term given to the inflammation of infection of
+      the mucous membranes of the nose
+    difficulty: HARD
+    choices:
+    - Rhinitis
+    - Bronchitis
+    - Laryngitis
+    - Pharyngitis
+    correctAnswer: Rhinitis
+    correctChoiceIndex: 0
+  - questionText: 'Cirrus, cirrocumulus, and cirrostratus are types of:'
+    difficulty: HARD
+    choices:
+    - Clouds
+    - Cyclones
+    - Stars
+    - Tornadoes
+    correctAnswer: Clouds
+    correctChoiceIndex: 0
+  - questionText: 'Most commercial nuclear power plants worldwide are cooled by:'
+    difficulty: HARD
+    choices:
+    - Water
+    - Air
+    - Liquid Nitrogen
+    - Liquid Sodium
+    correctAnswer: Water
+    correctChoiceIndex: 0
+  - questionText: What month is showing on the calendar when the Earth is nearest
+      the sun?
+    difficulty: HARD
+    choices:
+    - January
+    - February
+    - September
+    - December
+    correctAnswer: January
+    correctChoiceIndex: 0
+  - questionText: 'The first animal launched into orbit was a:'
+    difficulty: HARD
+    choices:
+    - Dog
+    - Cat
+    - Mouse
+    - Bird
+    correctAnswer: Dog
+    correctChoiceIndex: 0
+  - questionText: Which two gases are used to disinfect water in sewage treatment
+      facilities?
+    difficulty: HARD
+    choices:
+    - Ozone and Chlorine
+    - Oxygen and Carbon dioxide
+    - Chlorine and Fluorine
+    - Hydrogen and Helium
+    correctAnswer: Ozone and Chlorine
+    correctChoiceIndex: 0
+  - questionText: 'The most abundant organic molecule on the surface of the Earth
+      is:'
+    difficulty: HARD
+    choices:
+    - Cellulose
+    - Glucose
+    - Carbon dioxide
+    - Methane
+    correctAnswer: Cellulose
+    correctChoiceIndex: 0
+  - questionText: In daylight the human eye is most sensitive to which color?
+    difficulty: HARD
+    choices:
+    - Green
+    - Black
+    - Yellow
+    - Red
+    correctAnswer: Green
+    correctChoiceIndex: 0
+  - questionText: Group 18 of the periodic table is made up of which elements?
+    difficulty: HARD
+    choices:
+    - Noble gases
+    - Halogens
+    - Alkali metals
+    - Rare-earth elements
+    correctAnswer: Noble gases
+    correctChoiceIndex: 0
+  - questionText: Which of these chemical elements is heavier than iron?
+    difficulty: HARD
+    choices:
+    - Gold
+    - Silver
+    - Potassium
+    - Carbon
+    correctAnswer: Gold
+    correctChoiceIndex: 0
+  - questionText: What causes dew?
+    difficulty: HARD
+    choices:
+    - Condensation
+    - Evaporation
+    - Precipitation
+    - Transpiration
+    correctAnswer: Condensation
+    correctChoiceIndex: 0
+  - questionText: 'Two types of organisms deriving benefit from each other is known
+      as:'
+    difficulty: HARD
+    choices:
+    - Mutualism
+    - Amensalism
+    - Commensalism
+    - Parasitism
+    correctAnswer: Mutualism
+    correctChoiceIndex: 0
+  - questionText: Which of these is a form of energy which is due to an object or
+      a particle''s motion?
+    difficulty: HARD
+    choices:
+    - Kinetic Energy
+    - Potential Energy
+    - Chemical Energy
+    - Thermal Energy
+    correctAnswer: Kinetic Energy
+    correctChoiceIndex: 0
+  - questionText: Which of these gases solidifies to form dry ice?
+    difficulty: HARD
+    choices:
+    - Carbon Dioxide
+    - Nitrous Oxide
+    - Sulfur
+    - Helium
+    correctAnswer: Carbon Dioxide
+    correctChoiceIndex: 0
+  - questionText: Which of these laws states that the pressure (p) of a given quantity
+      of gas varies inversely with its volume (v) at a constant temperature?
+    difficulty: HARD
+    choices:
+    - Boyle's Law
+    - Gay-Lussac's Law
+    - Avogadro's Law
+    - Charles' Law
+    correctAnswer: Boyle's Law
+    correctChoiceIndex: 0
+  - questionText: What is the study of fungi called?
+    difficulty: HARD
+    choices:
+    - Mycology
+    - Phycology
+    - Bacteriology
+    - Virology
+    correctAnswer: Mycology
+    correctChoiceIndex: 0
+  - questionText: 'The process by which some animals locate distant or not visible
+      objects through sound waves is known as:'
+    difficulty: HARD
+    choices:
+    - Echolocation
+    - Longitudinal Waves
+    - Sonar
+    - Stridulation
+    correctAnswer: Echolocation
+    correctChoiceIndex: 0
+  - questionText: 'The unit of measuring the depth of water is called:'
+    difficulty: HARD
+    choices:
+    - Fathom
+    - Ampere
+    - Decibel
+    - Pascal
+    correctAnswer: Fathom
+    correctChoiceIndex: 0
+  - questionText: What is the total number of protons, neutrons, and electrons in
+      an atom of uranium-235?
+    difficulty: HARD
+    choices:
+    - 92 protons, 143 neutrons, 92 electrons
+    - 92 protons, 143 neutrons, 91 electrons
+    - 235 protons, 235 neutrons, 235 electrons
+    - 92 protons, 92 neutrons, 143 electrons
+    correctAnswer: 92 protons, 143 neutrons, 92 electrons
+    correctChoiceIndex: 0
+  - questionText: Which of the following elements has the highest number of isotopes?
+    difficulty: HARD
+    choices:
+    - Uranium
+    - Hydrogen
+    - Oxygen
+    - Carbon
+    correctAnswer: Uranium
+    correctChoiceIndex: 0
+  - questionText: What is the mass number of an atom with 14 neutrons and 12 electrons?
+    difficulty: HARD
+    choices:
+    - 26
+    - 12
+    - 14
+    - 16
+    correctAnswer: 26
+    correctChoiceIndex: 0
+  - questionText: How many electrons are there in the third shell of an atom with
+      an atomic number of 19?
+    difficulty: HARD
+    choices:
+    - 9
+    - 8
+    - 1
+    - 2
+    correctAnswer: 9
+    correctChoiceIndex: 0
+  - questionText: What is the molecular formula of glucose?
+    difficulty: HARD
+    choices:
+    - C6H12O6
+    - C2H4O2
+    - C3H6O3
+    - C4H8O4
+    correctAnswer: C6H12O6
+    correctChoiceIndex: 0
+  - questionText: Calculate the molar mass of NaCl.
+    difficulty: HARD
+    choices:
+    - 58.44 g/mol
+    - 22.99 g/mol
+    - 35.45 g/mol
+    - 23.00 g/mol
+    correctAnswer: 58.44 g/mol
+    correctChoiceIndex: 0
+  - questionText: How many moles are there in 36 grams of water (H2O)?
+    difficulty: HARD
+    choices:
+    - 3 moles
+    - 1 mole
+    - '2 mole '
+    - 4 moles
+    correctAnswer: 3 moles
+    correctChoiceIndex: 0
+  - questionText: What is the mass percent of carbon in carbon dioxide (CO2)?
+    difficulty: HARD
+    choices:
+    - 66.67%
+    - 12%
+    - 33.33%
+    - 50%
+    correctAnswer: 66.67%
+    correctChoiceIndex: 0
+  - questionText: Calculate the molar mass of calcium carbonate, CaCO3.
+    difficulty: HARD
+    choices:
+    - 102.09 g/mol
+    - 103.09 g/mol
+    - 100.09 g/mol
+    - 101.09 g/mol
+    correctAnswer: 102.09 g/mol
+    correctChoiceIndex: 0
+  - questionText: What is the ground state electron configuration of copper?
+    difficulty: HARD
+    choices:
+    - '[Ar] 4s2 3d10'
+    - '[Ar] 4s2 3d9'
+    - '[Ar] 4s1 3d10'
+    - '[Ar] 4s1 3d9'
+    correctAnswer: '[Ar] 4s2 3d10'
+    correctChoiceIndex: 0
+  - questionText: Which of the following substances is a Lewis acid?
+    difficulty: HARD
+    choices:
+    - BF3
+    - H20
+    - NH3
+    - CH4
+    correctAnswer: BF3
+    correctChoiceIndex: 0
+  - questionText: What is the molecular geometry of a molecule with three bonding
+      pairs and one lone pair of electrons?
+    difficulty: HARD
+    choices:
+    - Trigonal pyramidal
+    - Linear
+    - Tetrahedral
+    - Trigonal planar
+    correctAnswer: Trigonal pyramidal
+    correctChoiceIndex: 0
+  - questionText: Which of the following is a reducing agent?
+    difficulty: HARD
+    choices:
+    - H2
+    - Cu
+    - O2
+    - Fe
+    correctAnswer: H2
+    correctChoiceIndex: 0
+  - questionText: What is the pH of a solution with a hydroxide ion concentration
+      of 1 x 10-3 M?
+    difficulty: HARD
+    choices:
+    - 9
+    - 3
+    - 11
+    - 7
+    correctAnswer: 9
+    correctChoiceIndex: 0
+  - questionText: How many moles of magnesium oxide (MgO) are produced when 4 moles
+      of magnesium (Mg) react with excess oxygen (O2)?
+    difficulty: HARD
+    choices:
+    - 4 moles
+    - 2 moles
+    - 8 moles
+    - 16 moles
+    correctAnswer: 4 moles
+    correctChoiceIndex: 0
+  - questionText: Hafnium belongs to which group in the periodic table?
+    difficulty: HARD
+    choices:
+    - Group 4 (IVb)
+    - Group 13 (IIIa)
+    - Group 1 (Ia)
+    - Group 17 (VIIa)
+    correctAnswer: Group 4 (IVb)
+    correctChoiceIndex: 0
+  - questionText: Which of the following molecules exhibits hydrogen bonding?
+    difficulty: HARD
+    choices:
+    - H20
+    - CH4
+    - NH3
+    - CO2
+    correctAnswer: H20
+    correctChoiceIndex: 0
+  - questionText: How many stereoisomers are possible for a compound with the formula
+      C4H8Cl2?
+    difficulty: HARD
+    choices:
+    - 3
+    - 2
+    - 4
+    - 1
+    correctAnswer: 3
+    correctChoiceIndex: 0
+  - questionText: What is the product of the reaction between 1-butene and hydrogen
+      gas in the presence of a palladium catalyst?
+    difficulty: HARD
+    choices:
+    - 2-butanol
+    - 1-butanol
+    - Butane
+    - Butanal
+    correctAnswer: 2-butanol
+    correctChoiceIndex: 0
+  - questionText: 'The capacity of a material to deform permanently in response to
+      stress is called:'
+    difficulty: HARD
+    choices:
+    - Ductility
+    - Malleability
+    - Reflectivity
+    - Elasticity
+    correctAnswer: Ductility
+    correctChoiceIndex: 0
+  - questionText: In which phase of cellular respiration is carbon dioxide produced?
+    difficulty: HARD
+    choices:
+    - Krebs Cycle
+    - Glycolysis
+    - Electron transport chain
+    - Fermentation
+    correctAnswer: Krebs Cycle
+    correctChoiceIndex: 0
+  - questionText: Which of the following is NOT a function of the liver?
+    difficulty: HARD
+    choices:
+    - Oxygen transport
+    - Detoxification
+    - Carbodyhrate storage
+    - Protein synthesis
+    correctAnswer: Oxygen transport
+    correctChoiceIndex: 0
+  - questionText: What type of bond forms between the amino acids in a protein?
+    difficulty: HARD
+    choices:
+    - Peptide bond
+    - Hydrogen bond
+    - Ionic bond
+    - Covalent bond
+    correctAnswer: Peptide bond
+    correctChoiceIndex: 0
+  - questionText: What is the primary function of the nephron in the kidney?
+    difficulty: HARD
+    choices:
+    - Filtration of blood
+    - Secretion of hormones
+    - Regulation of blood pressure
+    - Digestion of proteins
+    correctAnswer: Filtration of blood
+    correctChoiceIndex: 0
+  - questionText: Which of these particles was discovered by J.J. Thompson?
+    difficulty: HARD
+    choices:
+    - Electron
+    - Proton
+    - Neutron
+    - Atom
+    correctAnswer: Electron
+    correctChoiceIndex: 0
+  - questionText: Which of the following is an example of a vector quantity?
+    difficulty: HARD
+    choices:
+    - Velocity
+    - Temperature
+    - Mass
+    - Speed
+    correctAnswer: Velocity
+    correctChoiceIndex: 0
+  - questionText: What is the SI unit of electric charge?
+    difficulty: HARD
+    choices:
+    - Coulomb
+    - Ohm
+    - Volt
+    - Ampere
+    correctAnswer: Coulomb
+    correctChoiceIndex: 0
+  - questionText: What is the efficiency of a heat engine that produces 200 J of
+      work from 800 J of heat input?
+    difficulty: HARD
+    choices:
+    - 25%
+    - 50%
+    - 75%
+    - 100%
+    correctAnswer: 25%
+    correctChoiceIndex: 0
+  - questionText: Which of the following is an example of non-Newtonian fluid behavior?
+    difficulty: HARD
+    choices:
+    - Honey dripping from a spoon
+    - Water flowing through a pipe
+    - Oil spreading on the surface of water
+    - Air flowing over an airplane wing
+    correctAnswer: Honey dripping from a spoon
+    correctChoiceIndex: 0
+  - questionText: Which of the following is an example of elastic collision?
+    difficulty: HARD
+    choices:
+    - A tennis ball bouncing off a wall
+    - Two cars colliding head-on and sticking together
+    - A bullet being fired from a gun
+    - A basketball being dribbled on the ground
+    correctAnswer: A tennis ball bouncing off a wall
+    correctChoiceIndex: 0
+  - questionText: What is the main principle behind the operation of a transformer?
+    difficulty: HARD
+    choices:
+    - Induction of electric current
+    - Conversation of energy
+    - Conversation of charge
+    - Generation of electric potential
+    correctAnswer: Induction of electric current
+    correctChoiceIndex: 0
+  - questionText: Which of the following is NOT a fundamental force in nature?
+    difficulty: HARD
+    choices:
+    - Centrifugal force
+    - Gravity
+    - Electromagnetism
+    - Strong nuclear force
+    correctAnswer: Centrifugal force
+    correctChoiceIndex: 0
+  - questionText: What is the critical angle for total internal reflection to occur
+      when light travels from water (n=1.33) to air (n=1.00)?
+    difficulty: HARD
+    choices:
+    - 48.75 degrees
+    - 30 degrees
+    - 45 degrees
+    - 90 degrees
+    correctAnswer: 48.75 degrees
+    correctChoiceIndex: 0
+  - questionText: What is the function of a concave lens in optics?
+    difficulty: HARD
+    choices:
+    - To diverge light rays
+    - To converge light rays
+    - To magnify images
+    - To correct astigmatism
+    correctAnswer: To diverge light rays
+    correctChoiceIndex: 0
+  - questionText: Which of the following phenomena is NOT explained by the wave theory
+      of light?
+    difficulty: HARD
+    choices:
+    - Photoelectric effect
+    - 'Inerference '
+    - Polarization
+    - Diffraction
+    correctAnswer: Photoelectric effect
+    correctChoiceIndex: 0
+  - questionText: What is the principal quantum number (n) for the d subshell?
+    difficulty: HARD
+    choices:
+    - 3
+    - 2
+    - 1
+    - 4
+    correctAnswer: 3
+    correctChoiceIndex: 0
+  - questionText: What is the atomic radius trend across a period in the periodic
+      table?
+    difficulty: HARD
+    choices:
+    - Decreases
+    - Increases
+    - 'Remains constant '
+    - First increases, then decreases
+    correctAnswer: Decreases
+    correctChoiceIndex: 0
+  - questionText: Which of the following elements has the highest electronegativity?
+    difficulty: HARD
+    choices:
+    - Fluorine (F)
+    - Chlorine (Cl)
+    - Sodium (Na)
+    - Oxygen (O)
+    correctAnswer: Fluorine (F)
+    correctChoiceIndex: 0
+  - questionText: What is the molecular geometry of a molecule with four electron
+      pairs around the central atom and two lone pairs?
+    difficulty: HARD
+    choices:
+    - Trigonal bipyramidal
+    - Tetrahedral
+    - Octahedral
+    - Square planar
+    correctAnswer: Trigonal bipyramidal
+    correctChoiceIndex: 0
+  - questionText: What is the wavelength range of ultraviolet radiation?
+    difficulty: HARD
+    choices:
+    - 100 - 400 nm
+    - 400 - 700 nm
+    - 700 -1000 nm
+    - 1000 - 1500 nm
+    correctAnswer: 100 - 400 nm
+    correctChoiceIndex: 0
+  - questionText: What is the primary structure of the Earth's atmosphere?
+    difficulty: HARD
+    choices:
+    - Nitrogen and oxygen
+    - Carbon dioxide and oxygen
+    - Nitrogen and carbon dioxide
+    - Nitrogen and argon
+    correctAnswer: Nitrogen and oxygen
+    correctChoiceIndex: 0
+  - questionText: What is the primary function of the Golgi apparatus?
+    difficulty: HARD
+    choices:
+    - Sorting and modification of proteins
+    - Protein synthesis
+    - Lipid synthesis
+    - ATP production
+    correctAnswer: Sorting and modification of proteins
+    correctChoiceIndex: 0
+  - questionText: Which of the following statements is NOT true about DNA replication?
+    difficulty: HARD
+    choices:
+    - It occurs during the G2 phase of the cell cycle
+    - It requires RNA primers
+    - It is semi-conservative
+    - It occurs in the 5' to 3' direction
+    correctAnswer: It occurs during the G2 phase of the cell cycle
+    correctChoiceIndex: 0
+  - questionText: What is the primary structure of a protein?
+    difficulty: HARD
+    choices:
+    - The sequence of amino acids
+    - The alpha-helix or beta-sheet structure
+    - The overall three-dimensional shape
+    - The arrangement of multiple polypeptide chains
+    correctAnswer: The sequence of amino acids
+    correctChoiceIndex: 0
+  - questionText: Which of these chemicals help fruit to ripen?
+    difficulty: HARD
+    choices:
+    - Ethylene
+    - Carbon dioxide
+    - Methane
+    - Nitrogen oxide
+    correctAnswer: Ethylene
+    correctChoiceIndex: 0
+  - questionText: Who developed the theory of the chemical reactivity of oxygen?
+    difficulty: HARD
+    choices:
+    - Antoine Lavoisier
+    - Louis Pasteur
+    - John Dalton
+    - Joseph Priestley
+    correctAnswer: Antoine Lavoisier
+    correctChoiceIndex: 0
+  - questionText: Which era is known as the age of mammals?
+    difficulty: HARD
+    choices:
+    - Cenozoic
+    - Mesozoic
+    - Paleozoic
+    - Archean
+    correctAnswer: Cenozoic
+    correctChoiceIndex: 0
+  - questionText: 'The scientific study of fishes is known as:'
+    difficulty: HARD
+    choices:
+    - Ichthyology
+    - Paleontology
+    - Ornithology
+    - Entomology
+    correctAnswer: Ichthyology
+    correctChoiceIndex: 0
+  - questionText: What kind of substance makes litmus paper turn blue?
+    difficulty: HARD
+    choices:
+    - Alkali
+    - Salt
+    - Base
+    - Acid
+    correctAnswer: Alkali
+    correctChoiceIndex: 0
+  - questionText: 'The only living reptiles that use a vertical limb posture in walking
+      is:'
+    difficulty: HARD
+    choices:
+    - Crocodile
+    - Snake
+    - Turtle
+    - Lizard
+    correctAnswer: Crocodile
+    correctChoiceIndex: 0
+  simpleQuestions:
+  - questionText: What do plants need to grow?
+    difficulty: EASY
+    correctAnswer: Water
+  - questionText: What is the hottest season of the year?
+    difficulty: EASY
+    correctAnswer: Summer
+  - questionText: What part of a plant absorbs water from the soil?
+    difficulty: EASY
+    correctAnswer: Root
+  - questionText: What falls from the sky during snowstorm?
+    difficulty: EASY
+    correctAnswer: Snow
+  - questionText: What tool do we use to measure temperature?
+    difficulty: EASY
+    correctAnswer: Thermometer
+  - questionText: What season comes after summer?
+    difficulty: EASY
+    correctAnswer: Fall
+  - questionText: Which planet do we live on?
+    difficulty: EASY
+    correctAnswer: Earth
+  - questionText: What is the center of our solar system?
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: "What is the earth\u2019s only natural satellite?"
+    difficulty: EASY
+    correctAnswer: Moon
+  - questionText: What do astronauts use to travel to space?
+    difficulty: EASY
+    correctAnswer: Spaceship
+  - questionText: What part of the body pumps blood?
+    difficulty: EASY
+    correctAnswer: Heart
+  - questionText: What do we use to see?
+    difficulty: EASY
+    correctAnswer: Eyes
+  - questionText: What helps us to hear?
+    difficulty: EASY
+    correctAnswer: Ears
+  - questionText: What do we use to taste food?
+    difficulty: EASY
+    correctAnswer: Tongue
+  - questionText: What is ice made of?
+    difficulty: EASY
+    correctAnswer: Water
+  - questionText: What state of matter is water?
+    difficulty: EASY
+    correctAnswer: Liquid
+  - questionText: What tool is used to measure weight?
+    difficulty: EASY
+    correctAnswer: Scale
+  - questionText: What force pulls everything towards the earth?
+    difficulty: EASY
+    correctAnswer: Gravity
+  - questionText: What kind of energy does the sun provide?
+    difficulty: EASY
+    correctAnswer: Solar
+  - questionText: What can magnets attract?
+    difficulty: EASY
+    correctAnswer: Metal
+  - questionText: What do we use to turn on a light?
+    difficulty: EASY
+    correctAnswer: Switch
+  - questionText: What do plants release into the air that we need to breathe?
+    difficulty: EASY
+    correctAnswer: Oxygen
+  - questionText: What is the process by which water changes from a liquid to a gas?
+    difficulty: EASY
+    correctAnswer: Evaporation
+  - questionText: What do bees collect from flowers to make honey?
+    difficulty: EASY
+    correctAnswer: Nectar
+  - questionText: What technique can be used to separate a mixture of sand and iron
+      filings?
+    difficulty: EASY
+    correctAnswer: Magnetic Separation
+  - questionText: What process can be used to separate a mixture of water and alcohol?
+    difficulty: EASY
+    correctAnswer: Distillation
+  - questionText: Which part of the plant is responsible for photosynthesis?
+    difficulty: EASY
+    correctAnswer: Leaves
+  - questionText: Which ecosystem is characterized by dense trees and high biodiversity?
+    difficulty: EASY
+    correctAnswer: Rainforest
+  - questionText: Which layer of the Earth is composed mostly of solid rock?
+    difficulty: EASY
+    correctAnswer: Crust
+  - questionText: Which form of energy is associated with the motion of objects?
+    difficulty: EASY
+    correctAnswer: Kinetic Energy
+  - questionText: What is the main source of energy for the Earth's climate system?
+    difficulty: EASY
+    correctAnswer: Solar Energy
+  - questionText: Which system in the human body is responsible for transporting
+      blood?
+    difficulty: EASY
+    correctAnswer: Circulatory system
+  - questionText: Which organ system includes the brain and spinal cord?
+    difficulty: EASY
+    correctAnswer: Nervous system
+  - questionText: Which process involves the conversion of sunlight into chemical
+      energy by plants?
+    difficulty: EASY
+    correctAnswer: Photosynthesis
+  - questionText: What word is given to a place that provides living things with
+      everything they need to survive?
+    difficulty: EASY
+    correctAnswer: Habitat
+  - questionText: 'What is the main component of weather? '
+    difficulty: EASY
+    correctAnswer: Temperature
+  - questionText: What type of cloud is associated with thunderstorms?
+    difficulty: EASY
+    correctAnswer: Cumulonimbus
+  - questionText: What is the term for the average weather conditions in an area
+      over a long period?
+    difficulty: EASY
+    correctAnswer: Climate
+  - questionText: What is the chemical symbol for water?
+    difficulty: EASY
+    correctAnswer: H2O
+  - questionText: Which state of matter has particles that are tightly packed and
+      vibrate in place?
+    difficulty: EASY
+    correctAnswer: Solid
+  - questionText: Which process changes a solid directly into a gas?
+    difficulty: EASY
+    correctAnswer: Sublimation
+  - questionText: What is the most abundant gas in the Earth's atmosphere?
+    difficulty: EASY
+    correctAnswer: Nitrogen
+  - questionText: Which layer of the Earth is liquid?
+    difficulty: EASY
+    correctAnswer: Outer core
+  - questionText: What type of rock is formed from molten lava?
+    difficulty: EASY
+    correctAnswer: Igneous
+  - questionText: Which natural disaster is caused by the movement of tectonic plates?
+    difficulty: EASY
+    correctAnswer: Earthquake
+  - questionText: Which vitamin is essential for strong bones?
+    difficulty: EASY
+    correctAnswer: Vitamin D
+  - questionText: What is the middle part of the Earth?
+    difficulty: EASY
+    correctAnswer: Mantle
+  - questionText: What is the name of the closest star to Earth?
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: Identify the planet known as the Red Planet.
+    difficulty: EASY
+    correctAnswer: Mars
+  - questionText: What is the largest planet in our solar system?
+    difficulty: EASY
+    correctAnswer: Jupiter
+  - questionText: Name the layer of gases surrounding Earth.
+    difficulty: EASY
+    correctAnswer: Atmosphere
+  - questionText: What is the hardest natural substance found on Earth?
+    difficulty: EASY
+    correctAnswer: Diamond
+  - questionText: What is the outer layer of skin called?
+    difficulty: EASY
+    correctAnswer: Epidermis
+  - questionText: Name the process by which a caterpillar transforms into a butterfly.
+    difficulty: EASY
+    correctAnswer: Metamorphosis
+  - questionText: Name the planet with the most rings.
+    difficulty: EASY
+    correctAnswer: Saturn
+  - questionText: Identify the body part used by birds for flying.
+    difficulty: EASY
+    correctAnswer: Wings
+  - questionText: What is the substance that gives plants their green color?
+    difficulty: EASY
+    correctAnswer: Chlorophyll
+  - questionText: Name the part of the plant responsible for anchoring it into the
+      ground.
+    difficulty: EASY
+    correctAnswer: Roots
+  - questionText: Identify the process by which rocks are broken down into smaller
+      pieces.
+    difficulty: EASY
+    correctAnswer: Weathering
+  - questionText: What is the name of the brightest star in the night sky?
+    difficulty: EASY
+    correctAnswer: Sirius
+  - questionText: Name the substance found in bones that makes them hard.
+    difficulty: EASY
+    correctAnswer: Calcium
+  - questionText: Identify the body part responsible for smelling.
+    difficulty: EASY
+    correctAnswer: Nose
+  - questionText: What is the layer of Earth's atmosphere that protects us from harmful
+      ultraviolet radiation?
+    difficulty: EASY
+    correctAnswer: Ozone Layer
+  - questionText: Name the body part that contains the brain.
+    difficulty: EASY
+    correctAnswer: Skull
+  - questionText: What is the process by which water returns to the atmosphere from
+      plants?
+    difficulty: EASY
+    correctAnswer: 'Transpiration '
+  - questionText: Name the organ responsible for filtering waste from the blood.
+    difficulty: EASY
+    correctAnswer: Kidneys
+  - questionText: Identify the natural disaster characterized by a violent rotating
+      column of air.
+    difficulty: EASY
+    correctAnswer: Tornado
+  - questionText: What is the substance found in plant cell walls that provides structure
+      and support?
+    difficulty: EASY
+    correctAnswer: Cellulose
+  - questionText: What do we call the change of state from a liquid to a solid?
+    difficulty: EASY
+    correctAnswer: Freezing
+  - questionText: Name the celestial body that Earth orbits around.
+    difficulty: EASY
+    correctAnswer: Sun
+  - questionText: What is the force that resists motion when two objects rub against
+      each other?
+    difficulty: EASY
+    correctAnswer: Friction
+  - questionText: What is the substance that gives blood its red color?
+    difficulty: EASY
+    correctAnswer: Hemoglobin
+  - questionText: Name the layer of Earth's atmosphere where most weather phenomena
+      occur.
+    difficulty: EASY
+    correctAnswer: Troposphere
+  - questionText: Name the process by which an organism changes over time to better
+      adapt to its environment.
+    difficulty: EASY
+    correctAnswer: Evolution
+  - questionText: Name the organ responsible for producing insulin in the human body.
+    difficulty: EASY
+    correctAnswer: Pancreas
+  - questionText: Identify the planet known as the ""Morning Star.
+    difficulty: EASY
+    correctAnswer: Venus
+  - questionText: A male cow is called
+    difficulty: EASY
+    correctAnswer: Ox
+  - questionText: What part of the body helps you move?
+    difficulty: EASY
+    correctAnswer: Muscles
+  - questionText: The two holes of the nose are called?
+    difficulty: EASY
+    correctAnswer: Nostrils
+  - questionText: Legs have feet and arms have ___.
+    difficulty: EASY
+    correctAnswer: Hands
+  - questionText: What is the young one of a cow called?
+    difficulty: EASY
+    correctAnswer: Calf
+  - questionText: Dark rain clouds can give out lightning and ____.
+    difficulty: EASY
+    correctAnswer: Thunder
+  - questionText: Your hands have four fingers and a ____.
+    difficulty: EASY
+    correctAnswer: Thumb
+  - questionText: What is the boiling point of water?
+    difficulty: EASY
+    correctAnswer: "100\xB0C"
+  - questionText: Frog is a reptile or amphibian?
+    difficulty: EASY
+    correctAnswer: Amphibian
+  - questionText: When you push something, you apply ____.
+    difficulty: EASY
+    correctAnswer: Force
+  - questionText: Which group of animals have scales?
+    difficulty: EASY
+    correctAnswer: Reptiles
+  - questionText: Where does our food collect after we chew and swallow it?
+    difficulty: EASY
+    correctAnswer: Stomach
+  - questionText: "What is the name of a frog\u2019s young one?"
+    difficulty: EASY
+    correctAnswer: Tadpole
+  - questionText: What tissue connects muscles to bones?
+    difficulty: EASY
+    correctAnswer: Tendon
+  - questionText: Which nutrient plays an essential role in muscle-building?
+    difficulty: EASY
+    correctAnswer: Protein
+  - questionText: Plants need which gas to perform photosynthesis?
+    difficulty: EASY
+    correctAnswer: Carbon dioxide
+  - questionText: Similar body cells group together to form a ___.
+    difficulty: EASY
+    correctAnswer: Tissue
+  - questionText: The standard unit of measurement for energy is ____.
+    difficulty: EASY
+    correctAnswer: Joule
+  - questionText: What are animals, which eat both plants and animals, called?
+    difficulty: EASY
+    correctAnswer: Omnivores
+  - questionText: Where would you be most likely to find a worm?
+    difficulty: EASY
+    correctAnswer: Soil
+  - questionText: What is the largest organ in the human body?
+    difficulty: EASY
+    correctAnswer: Skin
+  - questionText: 'Which type of animal lays eggs: mammals or reptiles?'
+    difficulty: EASY
+    correctAnswer: Reptiles
+  - questionText: How many planets are there in our solar system?
+    difficulty: EASY
+    correctAnswer: 8
+  - questionText: 'What is the name of the phenomenon where the Moon partially or
+      completely covers the Sun? '
+    difficulty: EASY
+    correctAnswer: Solar Eclipse
+  - questionText: What is the most important sign of an impending volcanic eruption
+      which is also referred as seismic activity?
+    difficulty: MEDIUM
+    correctAnswer: Volcanic tremor
+  - questionText: What part of the volcano serves as the region under the surface
+      of the Earth where hot molten magma is collected?
+    difficulty: MEDIUM
+    correctAnswer: Magma chamber
+  - questionText: What is the term used to represent the opening of the volcano where
+      magma comes out?
+    difficulty: MEDIUM
+    correctAnswer: Crater
+  - questionText: What type of volcanoes are formed from viscous or sticky lava that
+      does not flow easily?
+    difficulty: MEDIUM
+    correctAnswer: Composite volcanoes
+  - questionText: What force enables objects to reach the ground?
+    difficulty: MEDIUM
+    correctAnswer: Gravitational Force
+  - questionText: What is the shape of the trajectory of a projectile?
+    difficulty: MEDIUM
+    correctAnswer: Parabolic
+  - questionText: What is referred to as an object that is given an initial velocity
+      and is then acted solely upon by gravitational force?
+    difficulty: MEDIUM
+    correctAnswer: Projectile
+  - questionText: 'What do you call the path followed by an object under projectile
+      motion? '
+    difficulty: MEDIUM
+    correctAnswer: Trajectory
+  - questionText: If you throw a baseball straight up, what is its vertical velocity
+      at the highest point?
+    difficulty: MEDIUM
+    correctAnswer: 0m/s
+  - questionText: What is the acceleration of a baseball thrown to the air at an
+      angle of 45 degrees with respect to the horizontal as it returns to the ground?
+    difficulty: MEDIUM
+    correctAnswer: -9.8m/s
+  - questionText: He theorized that changing magnetic field will produce electric
+      field.
+    difficulty: MEDIUM
+    correctAnswer: Faraday
+  - questionText: Visible light is the only EM wave that can be seen by our naked
+      eye. What is the color of light if it has a frequency of 4.5 x1014 Hz?
+    difficulty: MEDIUM
+    correctAnswer: Red
+  - questionText: Which type of EM wave has wavelength similar to the size of a 1
+      Peso coin?
+    difficulty: MEDIUM
+    correctAnswer: Microwave
+  - questionText: In the electromagnetic spectrum, which has the longest wavelength?
+    difficulty: MEDIUM
+    correctAnswer: Radio wave
+  - questionText: What is another term for nerve cell?
+    difficulty: MEDIUM
+    correctAnswer: Neuron
+  - questionText: This serves as a channel for signals between the brain and the
+      rest of body?
+    difficulty: MEDIUM
+    correctAnswer: Spinal cord
+  - questionText: "Which part of the brain helps keep your balance so you don\u2019t
+      just fall or stumble while walking?"
+    difficulty: MEDIUM
+    correctAnswer: Cerebellum
+  - questionText: Instructions from the brain to the target organs is carried by
+      _________.
+    difficulty: MEDIUM
+    correctAnswer: Nerves
+  - questionText: Who was the English scientist who studied the relationship between
+      the volume of a gas and its pressure?
+    difficulty: MEDIUM
+    correctAnswer: Robert Boyle
+  - questionText: It is the upward push exerted by a liquid, like water, on an object.
+    difficulty: MEDIUM
+    correctAnswer: Buoyant force
+  - questionText: What is the chemical formula for table salt?
+    difficulty: MEDIUM
+    correctAnswer: NaCl
+  - questionText: What is the powerhouse of the cell?
+    difficulty: MEDIUM
+    correctAnswer: Mitochondria
+  - questionText: Which part of the cell contains the genetic material?
+    difficulty: MEDIUM
+    correctAnswer: Nucleus
+  - questionText: What type of organism is yeast?
+    difficulty: MEDIUM
+    correctAnswer: Fungus
+  - questionText: What is the term for the amount of matter in an object?
+    difficulty: MEDIUM
+    correctAnswer: Mass
+  - questionText: What is the term for an organism that makes its own food using
+      sunlight?
+    difficulty: MEDIUM
+    correctAnswer: Autorotroph
+  - questionText: It is the changing of an object into another substance after interacting
+      with oxygen
+    difficulty: MEDIUM
+    correctAnswer: Oxidation
+  - questionText: We measure it to specify exactly how much space an object occupies.
+    difficulty: MEDIUM
+    correctAnswer: Volume
+  - questionText: It is the characteristics of metal that can be pounded and shaped
+      into very thin sheets without breaking.
+    difficulty: MEDIUM
+    correctAnswer: Malleability
+  - questionText: It is a substance consisting of the atoms of two or more elements
+      that are chemically combined in a fix proportion.
+    difficulty: MEDIUM
+    correctAnswer: Compound
+  - questionText: It is the characteristics of metal that can be stretched into wires
+      or thread.
+    difficulty: MEDIUM
+    correctAnswer: Ductility
+  - questionText: They exhibit the properties of both metals and nonmetals.
+    difficulty: MEDIUM
+    correctAnswer: Metalloids
+  - questionText: It is the kind of compound that do not contain carbon and are usually
+      found outside the bodies of living organisms.
+    difficulty: MEDIUM
+    correctAnswer: Inorganic compound
+  - questionText: It is intricate pattern of relationships where several food chains
+      are interlinked.
+    difficulty: MEDIUM
+    correctAnswer: Food web
+  - questionText: The participating organisms compete for the same needs in their
+      environment.
+    difficulty: MEDIUM
+    correctAnswer: Competition
+  - questionText: In a relationship shown by an orchid and a tree, what do we call
+      the orchid?
+    difficulty: MEDIUM
+    correctAnswer: Commensal
+  - questionText: It is a kind of interaction wherein one organism is benefited while
+      other is harmed.
+    difficulty: MEDIUM
+    correctAnswer: Parasitism
+  - questionText: It is part of cell where the main life activities occurs.
+    difficulty: MEDIUM
+    correctAnswer: Cytoplasm
+  - questionText: It is protectively envelope the cytoplasm.
+    difficulty: MEDIUM
+    correctAnswer: Cell membrane
+  - questionText: These are long threadlike structures which are made up of molecules
+      of protein and DNA.
+    difficulty: MEDIUM
+    correctAnswer: Cilia
+  - questionText: It is the process of producing sex cells of gametes.
+    difficulty: MEDIUM
+    correctAnswer: Gametogenesis
+  - questionText: It is the process of transfer of pollen from an anther to the sigma.
+    difficulty: MEDIUM
+    correctAnswer: Pollination
+  - questionText: It is when solute is given in a greater amount in the given system.
+    difficulty: MEDIUM
+    correctAnswer: Concentrated
+  - questionText: It refers to the number of moles solute present in one liter of
+      the solution.
+    difficulty: MEDIUM
+    correctAnswer: Molarity
+  - questionText: It is often consider a universal solvent.
+    difficulty: MEDIUM
+    correctAnswer: H2O
+  - questionText: It is a measure of the concentration of hydronium ions in a solution.
+    difficulty: MEDIUM
+    correctAnswer: pH
+  - questionText: It is an organic compound that changes color when acids or bases
+      are present.
+    difficulty: MEDIUM
+    correctAnswer: Indicator
+  - questionText: It is a substance that keeps the pH of a weakly acidic or basic
+      solution practically constant in spite of the addition of an acid or a base.
+    difficulty: MEDIUM
+    correctAnswer: Buffer
+  - questionText: It is a reaction between an acid and a base forming salt and water.
+    difficulty: MEDIUM
+    correctAnswer: Neutralization
+  - questionText: All of the members of a particular species that live in one area
+      are called a
+    difficulty: MEDIUM
+    correctAnswer: Population
+  - questionText: What sound wave is used in the medical field to detect abnormal
+      growth in some internalorgans of the human body?
+    difficulty: MEDIUM
+    correctAnswer: Ultrasonic waves
+  - questionText: The different forms of a gene
+    difficulty: MEDIUM
+    correctAnswer: Allele
+  - questionText: A rod-shaped cellular structure made of condensed chromatin; contains
+      DNA, which carries the genetic information that controls inherited characteristics
+      such as eye color and blood type
+    difficulty: MEDIUM
+    correctAnswer: Chromosome
+  - questionText: A segment of DNA on a chromosome that codes for a specific trait
+    difficulty: MEDIUM
+    correctAnswer: Gene
+  - questionText: The scientific study of heredity.
+    difficulty: MEDIUM
+    correctAnswer: Genetics
+  - questionText: The passing of traits from parents to offspring.
+    difficulty: MEDIUM
+    correctAnswer: Heredity
+  - questionText: Having two different alleles for a trait
+    difficulty: MEDIUM
+    correctAnswer: Heterozygous
+  - questionText: Having two identical alleles for a trait
+    difficulty: MEDIUM
+    correctAnswer: Homozygous
+  - questionText: A change in a gene or chromosome
+    difficulty: MEDIUM
+    correctAnswer: Mutation
+  - questionText: A characteristic that an organism can pass onto its offspring through
+      its genes
+    difficulty: MEDIUM
+    correctAnswer: Trait
+  - questionText: A chart that shows all the possible combinations of alleles that
+      can result from a genetic cross
+    difficulty: MEDIUM
+    correctAnswer: Punnett square
+  - questionText: He is a chemist and a physicist and was awarded the 1908 Nobel
+      prize in Chemistry for his theory of atomic structure.
+    difficulty: MEDIUM
+    correctAnswer: Ernest Rutherford
+  - questionText: It is an instrument that scientist use to record the shaking of
+      the ground.
+    difficulty: MEDIUM
+    correctAnswer: Seismograph
+  - questionText: How many planets revolve around the sun?
+    difficulty: MEDIUM
+    correctAnswer: 8
+  - questionText: What does NASA stand for?
+    difficulty: MEDIUM
+    correctAnswer: National Aeronautics and Space Administration
+  - questionText: What planet is approximately the same size as the Earth?
+    difficulty: MEDIUM
+    correctAnswer: Venus
+  - questionText: ____________ is when toxins build up in a single organism.
+    difficulty: MEDIUM
+    correctAnswer: Bioaccumulation
+  - questionText: 'Measurable or numerical information is called:'
+    difficulty: MEDIUM
+    correctAnswer: Quantitative data
+  - questionText: What is the word for a measure of the force of gravity on an object?
+    difficulty: MEDIUM
+    correctAnswer: Friction
+  - questionText: 'Chromosomes move toward opposite ends of the cell during:'
+    difficulty: MEDIUM
+    correctAnswer: Anaphase
+  - questionText: Which of the following is the tube that leads from the throat to
+      the stomach?
+    difficulty: MEDIUM
+    correctAnswer: Esophagus
+  - questionText: What part of the cell stores water and maintain its rigidity?
+    difficulty: MEDIUM
+    correctAnswer: Vacuole
+  - questionText: What does the slope of a distance vs. time graph represent?
+    difficulty: MEDIUM
+    correctAnswer: Speed
+  - questionText: This refers to the shortest distaance between the object's two
+      positions.
+    difficulty: MEDIUM
+    correctAnswer: Displacement
+  - questionText: In humans, after which stage of the gastrointestinal (digestive)
+      tract is food fully digested?
+    difficulty: MEDIUM
+    correctAnswer: Small intestines
+  - questionText: 'Large vessels that carry blood away from the heart are called:'
+    difficulty: MEDIUM
+    correctAnswer: Arteries
+  - questionText: A negative ion is created when an atom _________ electrons.
+    difficulty: MEDIUM
+    correctAnswer: Gains
+  - questionText: The correct chemical formula for copper (I) bromide is __________
+    difficulty: MEDIUM
+    correctAnswer: CuBr
+  - questionText: Which group on the periodic table has elements with full valence
+      shells?
+    difficulty: MEDIUM
+    correctAnswer: Noble gases
+  - questionText: Through which type of material does light pass through most easily?
+    difficulty: MEDIUM
+    correctAnswer: Transparent
+  - questionText: What is the waste by-product of photosynthesis?
+    difficulty: MEDIUM
+    correctAnswer: Oxygen
+  - questionText: 'The three parts of a nucleotide are called: phosphate, nitrogen
+      base, and a _______.'
+    difficulty: MEDIUM
+    correctAnswer: Sugar
+  - questionText: What do you call compounds with the same molecular formulars?
+    difficulty: MEDIUM
+    correctAnswer: Isomers
+  - questionText: This theory explains how collision between reactant molecules may
+      or may not result in a successful chemical reaction.
+    difficulty: MEDIUM
+    correctAnswer: Collision Theory
+  - questionText: A coil of wire that uses current to produce a strong magnetic field.
+    difficulty: MEDIUM
+    correctAnswer: Electromagnet
+  - questionText: What type of blood vessels carries deoxygenated blood?
+    difficulty: MEDIUM
+    correctAnswer: Vena cava
+  - questionText: What part of the heart receives blood from the body cells?
+    difficulty: MEDIUM
+    correctAnswer: Right atrium
+  - questionText: Which part of the cell the gene is located?
+    difficulty: MEDIUM
+    correctAnswer: Chromosomes
+  - questionText: When the population of a species begins declining rapidly, the
+      species is said to be a/an _______species.
+    difficulty: MEDIUM
+    correctAnswer: Extinct
+  - questionText: Stars can be found in large groups throughout the universe. What
+      are these groups called?
+    difficulty: MEDIUM
+    correctAnswer: Constellations
+  - questionText: It refers to the atmospheric condition of a place over a long period
+      of time.
+    difficulty: MEDIUM
+    correctAnswer: Climate
+  - questionText: What device records the distance traveled by a vehicle?
+    difficulty: MEDIUM
+    correctAnswer: Odometer
+  - questionText: Which mirror is used for side view in vehicles?
+    difficulty: MEDIUM
+    correctAnswer: Convex
+  - questionText: The oxidation of food substances to release energy is
+    difficulty: MEDIUM
+    correctAnswer: Respiration
+  - questionText: The process by which air is actively taken in and out of the body
+      is called
+    difficulty: MEDIUM
+    correctAnswer: Breathing
+  - questionText: The _______ contains some cellular structures called organelles.
+    difficulty: MEDIUM
+    correctAnswer: Cytoplasm
+  - questionText: The process of passing out undigested food through the anus is
+    difficulty: MEDIUM
+    correctAnswer: Egestion
+  - questionText: Any change in external and internal environment of a living organism
+      is
+    difficulty: MEDIUM
+    correctAnswer: Stimulus
+  - questionText: The urine is stored in the ______.
+    difficulty: MEDIUM
+    correctAnswer: Urinary bladder
+  - questionText: 'Urine is excreted by the '
+    difficulty: MEDIUM
+    correctAnswer: Kidney
