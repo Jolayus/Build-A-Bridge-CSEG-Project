@@ -8,6 +8,7 @@ public class LevelsScript : MonoBehaviour
     public Button mediumButton;
     public Button hardButton;
 
+    
     void Start()
     {
         easyButton.onClick.AddListener(() => OnDifficultyButtonClicked("Easy"));
