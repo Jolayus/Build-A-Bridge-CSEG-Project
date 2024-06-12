@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionManager : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class QuestionManager : MonoBehaviour
     public GameObject InputAndSubmit;
     public GameObject Player;
     
-    // Handling the currentHearts of the player
-    private int currentHearts = 3;
-    private GameObject[] hearts;
+    // // Handling the currentHearts of the player
+    // private int currentHearts = 3;
+    // private GameObject[] hearts;
 
     private int currentQuestionIndex;
     private int questionCount = 0;
+    private int questionsAnswered = 0;
     private int score = 0;
     private string difficulty;
     private QuestionsData temporaryQuestionsData;
@@ -35,7 +37,7 @@ public class QuestionManager : MonoBehaviour
 
         Player = GameObject.FindWithTag("Player");
 
-        hearts = GameObject.FindGameObjectsWithTag("heart");
+        // hearts = GameObject.FindGameObjectsWithTag("heart");
 
         difficulty = GameSettings.selectedDifficulty;
 
@@ -141,17 +143,17 @@ public class QuestionManager : MonoBehaviour
 
         Player.GetComponent<PlayerMovement>().Move();
         
-        // Decrement the current hearts and destroy the UI (heart)
-        currentHearts--;
-        Destroy(hearts[hearts.Length - 1]);
-        hearts = hearts.Take(hearts.Count() - 1).ToArray();
+        // // Decrement the current hearts and destroy the UI (heart)
+        // currentHearts--;
+        // Destroy(hearts[hearts.Length - 1]);
+        // hearts = hearts.Take(hearts.Count() - 1).ToArray();
 
-        if (currentHearts == 0) {
-            foreach (Button button in choicesButtons)
-            {
-                button.interactable = false;
-            }
-        }
+        // if (currentHearts == 0) {
+        //     foreach (Button button in choicesButtons)
+        //     {
+        //         button.interactable = false;
+        //     }
+        // }
 
         StartCoroutine(Next());
     }
@@ -175,17 +177,17 @@ public class QuestionManager : MonoBehaviour
 
         Player.GetComponent<PlayerMovement>().Move();
         
-        // Decrement the current hearts and destroy the UI (heart)
-        currentHearts--;
-        Destroy(hearts[hearts.Length - 1]);
-        hearts = hearts.Take(hearts.Count() - 1).ToArray();
+        // // Decrement the current hearts and destroy the UI (heart)
+        // currentHearts--;
+        // Destroy(hearts[hearts.Length - 1]);
+        // hearts = hearts.Take(hearts.Count() - 1).ToArray();
 
-        if (currentHearts == 0) {
-            foreach (Button button in choicesButtons)
-            {
-                button.interactable = false;
-            }
-        }
+        // if (currentHearts == 0) {
+        //     foreach (Button button in choicesButtons)
+        //     {
+        //         button.interactable = false;
+        //     }
+        // }
 
         StartCoroutine(Next());
     }
@@ -194,14 +196,25 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log(temporaryQuestionsData.multipleChoiceQuestions.Count);
-        Debug.Log(temporaryQuestionsData.simpleQuestions.Count);
+        // Debug.Log(temporaryQuestionsData.multipleChoiceQuestions.Count);
+        // Debug.Log(temporaryQuestionsData.simpleQuestions.Count);
 
         questionCount--;
+        questionsAnswered++;
 
-        currentQuestionIndex = Random.Range(0, questionCount);
-        
-        Reset();
+        if (questionsAnswered < 10)
+        {
+            currentQuestionIndex = Random.Range(0, questionCount);
+
+            Reset();
+        }
+        else
+        {
+            GameSettings.completedLevels.Add(difficulty.ToLower());
+
+            // Take the player back to the start menu to select a new difficulty
+            SceneManager.LoadScene("StartMenuScene");
+        }
     }
 
     void CreateTemporaryQuestionsList(string difficulty)
