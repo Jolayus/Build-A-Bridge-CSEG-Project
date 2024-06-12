@@ -286,7 +286,7 @@ public class QuestionManager : MonoBehaviour
     
     void NextLevel()
     {
-        
+        GameSettings.completedLevels.Add(difficulty.ToLower());
         levelComplete.SetScore(score);
         levelCompleteUI.SetActive(true);
     }

@@ -19,11 +19,11 @@ public class MainMenuScript : MonoBehaviour
             if(GameSettings.completedLevels.Contains(difficulty) || difficulty == "easy")
             {
                 button.interactable = true;
-            }else if (GameSettings.selectedDifficulty == "medium" && GameSettings.completedLevels.Contains("easy"))
+            }else if (difficulty == "medium" && GameSettings.completedLevels.Contains("easy"))
             {
                 
                 button.interactable = true;
-            }else if (GameSettings.selectedDifficulty == "hard" && GameSettings.completedLevels.Contains("medium"))
+            }else if (difficulty == "hard" && GameSettings.completedLevels.Contains("medium"))
             {
                 button.interactable = true;
             }
