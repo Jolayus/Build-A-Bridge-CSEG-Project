@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class QuestionManager : MonoBehaviour
@@ -27,9 +28,9 @@ public class QuestionManager : MonoBehaviour
     public GameOverScreen gameOverScreen;
     public LevelComplete levelComplete;
     
-    // // Handling the currentHearts of the player
-    // private int currentHearts = 3;
-    // private GameObject[] hearts;
+    // Handling the currentHearts of the player
+    private int currentHearts = 3;
+    private GameObject[] hearts;
 
     private int currentQuestionIndex;
     private int questionCount = 0;
@@ -44,7 +45,7 @@ public class QuestionManager : MonoBehaviour
 
         Player = GameObject.FindWithTag("Player");
 
-        // hearts = GameObject.FindGameObjectsWithTag("heart");
+        hearts = GameObject.FindGameObjectsWithTag("heart");
 
         difficulty = GameSettings.selectedDifficulty;
 
