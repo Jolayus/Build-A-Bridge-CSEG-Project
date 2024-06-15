@@ -240,49 +240,6 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    void CheckAnswer(int choiceIndex)
-    {
-        var question = temporaryQuestionsData.multipleChoiceQuestions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
-
-        if (question != null && choiceIndex == question.correctChoiceIndex)
-        {
-            score++;
-            scoreText.text = "Score: " + score;
-            Player.GetComponent<PlayerMovement>().Move();
-            SoundManager.Instance.PlayCorrectSound();
-        }
-        else
-        {
-            // Decrement the current hearts and destroy the UI (heart)
-            currentHearts--;
-            Destroy(hearts[hearts.Length - 1]);
-            hearts = hearts.Take(hearts.Count() - 1).ToArray();
-            SoundManager.Instance.PlayIncorrectSound();
-        }
-
-        foreach (Button button in choicesButtons)
-        {
-            button.interactable = false;
-        }
-
-        inputText.text = "";
-
-        temporaryQuestionsData.multipleChoiceQuestions.RemoveAt(currentQuestionIndex); // Move to the if statement
-
-        if (currentHearts == 0) {
-            foreach (Button button in choicesButtons)
-            {
-                button.interactable = false;
-                GameOver();
-            }
-        }
-        if (score == 11)
-        {
-            NextLevel();
-        }
-        StartCoroutine(Next());
-    }
-
     IEnumerator Next()
     {
         yield return new WaitForSeconds(1f);
