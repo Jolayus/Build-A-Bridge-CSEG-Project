@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class QuestionManager : MonoBehaviour
@@ -33,6 +34,7 @@ public class QuestionManager : MonoBehaviour
 
     private int currentQuestionIndex;
     private int questionCount = 0;
+    private int questionsAnswered = 0;
     private int score = 0;
     private string difficulty;
     private QuestionsData temporaryQuestionsData;
@@ -116,15 +118,19 @@ public class QuestionManager : MonoBehaviour
                     button.onClick.RemoveAllListeners();
                 }
 
+                List<int> indices = Enumerable.Range(0, MQuestion.choices.Length).ToList();
+                indices = indices.OrderBy(x => Random.value).ToList();
+
                 for (int i = 0; i < choicesButtons.Length; i++)
                 {
                     choicesButtons[i].gameObject.SetActive(i < MQuestion.choices.Length);
-                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[i];
 
-                    int choiceIndex = i;
+                    int shuffledIndex = indices[i];
+                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[shuffledIndex];
+
                     choicesButtons[i].onClick.AddListener(() =>
                     {
-                        CheckAnswer(choiceIndex);
+                        CheckAnswer(shuffledIndex);
                     });
                 }
             }
@@ -132,14 +138,13 @@ public class QuestionManager : MonoBehaviour
             {
                 Debug.LogError("The question is not of type QuestionMultipleChoice.");
             }
-
-
         }
         else
         {
             Debug.LogError("Invalid difficulty selected.");
         }
     }
+
 
     void CheckAnswer()
     {
@@ -230,14 +235,25 @@ public class QuestionManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        Debug.Log(temporaryQuestionsData.multipleChoiceQuestions.Count);
-        Debug.Log(temporaryQuestionsData.simpleQuestions.Count);
+        // Debug.Log(temporaryQuestionsData.multipleChoiceQuestions.Count);
+        // Debug.Log(temporaryQuestionsData.simpleQuestions.Count);
 
         questionCount--;
+        questionsAnswered++;
 
-        currentQuestionIndex = Random.Range(0, questionCount);
-        
-        Reset();
+        if (questionsAnswered < 10)
+        {
+            currentQuestionIndex = Random.Range(0, questionCount);
+
+            Reset();
+        }
+        else
+        {
+            GameSettings.completedLevels.Add(difficulty.ToLower());
+
+            // Take the player back to the start menu to select a new difficulty
+            SceneManager.LoadScene("StartMenuScene");
+        }
     }
 
     void CreateTemporaryQuestionsList(string difficulty)
