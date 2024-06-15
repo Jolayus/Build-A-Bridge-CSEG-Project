@@ -150,15 +150,14 @@ public class QuestionManager : MonoBehaviour
             score++;
             scoreText.text = "Score: " + score;
             Player.GetComponent<PlayerMovement>().Move();
-            
-
+            SoundManager.Instance.PlayCorrectSound();
         } else
         {
             // Decrement the current hearts and destroy the UI (heart)
             currentHearts--;
             Destroy(hearts[hearts.Length - 1]);
             hearts = hearts.Take(hearts.Count() - 1).ToArray();
-            
+            SoundManager.Instance.PlayIncorrectSound();
         }
 
         inputText.text = "";
@@ -193,6 +192,7 @@ public class QuestionManager : MonoBehaviour
             score++;
             scoreText.text = "Score: " + score;
             Player.GetComponent<PlayerMovement>().Move();
+            SoundManager.Instance.PlayCorrectSound();
         }
         else
         {
@@ -200,6 +200,7 @@ public class QuestionManager : MonoBehaviour
             currentHearts--;
             Destroy(hearts[hearts.Length - 1]);
             hearts = hearts.Take(hearts.Count() - 1).ToArray();
+            SoundManager.Instance.PlayIncorrectSound();
         }
 
         foreach (Button button in choicesButtons)
