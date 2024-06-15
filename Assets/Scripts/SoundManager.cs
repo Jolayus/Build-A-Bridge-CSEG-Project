@@ -19,7 +19,6 @@ public class SoundManager : MonoBehaviour
     public void PlayIncorrectSound()
     {
         audioSource.PlayOneShot(incorrectSound);
-        print("INCORRECT");
     }
 
     // Start is called before the first frame update
@@ -34,5 +33,7 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 }
