@@ -116,15 +116,19 @@ public class QuestionManager : MonoBehaviour
                     button.onClick.RemoveAllListeners();
                 }
 
+                var choices = MQuestion.choices.Select((choice, index) => new { choice, index }).ToList();
+                var shuffledChoices = choices.OrderBy(x => Random.value).ToList();
+                int correctChoiceIndex = shuffledChoices.FindIndex(x => x.index == MQuestion.correctChoiceIndex);
+
                 for (int i = 0; i < choicesButtons.Length; i++)
                 {
-                    choicesButtons[i].gameObject.SetActive(i < MQuestion.choices.Length);
-                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[i];
+                    choicesButtons[i].gameObject.SetActive(i < shuffledChoices.Count);
+                    choicesButtons[i].GetComponentInChildren<Text>().text = shuffledChoices[i].choice;
 
                     int choiceIndex = i;
                     choicesButtons[i].onClick.AddListener(() =>
                     {
-                        CheckAnswer(choiceIndex);
+                        CheckAnswer(choiceIndex, correctChoiceIndex);
                     });
                 }
             }
@@ -181,6 +185,59 @@ public class QuestionManager : MonoBehaviour
         }
 
         StartCoroutine(Next());
+    }
+
+    void CheckAnswer(int choiceIndex, int correctChoiceIndex)
+    {
+        var question = temporaryQuestionsData.multipleChoiceQuestions[currentQuestionIndex] as QuestionsData.QuestionMultipleChoice;
+
+        if (question != null)
+        {
+            string selectedAnswer = choicesButtons[choiceIndex].GetComponentInChildren<Text>().text;
+            string correctAnswer = choicesButtons[correctChoiceIndex].GetComponentInChildren<Text>().text;
+
+            if (selectedAnswer == correctAnswer)
+            {
+                score++;
+                scoreText.text = "Score: " + score;
+                Player.GetComponent<PlayerMovement>().Move();
+                SoundManager.Instance.PlayCorrectSound();
+            }
+            else
+            {
+                // Decrement the current hearts and destroy the UI (heart)
+                currentHearts--;
+                Destroy(hearts[currentHearts].gameObject);
+                hearts = hearts.Take(currentHearts).ToArray();
+                SoundManager.Instance.PlayIncorrectSound();
+            }
+
+            // Remove the current question from the list
+            temporaryQuestionsData.multipleChoiceQuestions.RemoveAt(currentQuestionIndex);
+
+            // Disable all answer buttons
+            foreach (Button button in choicesButtons)
+            {
+                button.interactable = false;
+            }
+
+            // Reset input text (if used)
+            inputText.text = "";
+
+            // Check if the game is over
+            if (currentHearts == 0)
+            {
+                GameOver();
+            }
+            else if (score == 11)
+            {
+                NextLevel();
+            }
+            else
+            {
+                StartCoroutine(Next());
+            }
+        }
     }
 
     void CheckAnswer(int choiceIndex)
