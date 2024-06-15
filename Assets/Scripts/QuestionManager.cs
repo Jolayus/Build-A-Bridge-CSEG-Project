@@ -118,15 +118,19 @@ public class QuestionManager : MonoBehaviour
                     button.onClick.RemoveAllListeners();
                 }
 
+                List<int> indices = Enumerable.Range(0, MQuestion.choices.Length).ToList();
+                indices = indices.OrderBy(x => Random.value).ToList();
+
                 for (int i = 0; i < choicesButtons.Length; i++)
                 {
                     choicesButtons[i].gameObject.SetActive(i < MQuestion.choices.Length);
-                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[i];
 
-                    int choiceIndex = i;
+                    int shuffledIndex = indices[i];
+                    choicesButtons[i].GetComponentInChildren<Text>().text = MQuestion.choices[shuffledIndex];
+
                     choicesButtons[i].onClick.AddListener(() =>
                     {
-                        CheckAnswer(choiceIndex);
+                        CheckAnswer(shuffledIndex);
                     });
                 }
             }
@@ -134,14 +138,13 @@ public class QuestionManager : MonoBehaviour
             {
                 Debug.LogError("The question is not of type QuestionMultipleChoice.");
             }
-
-
         }
         else
         {
             Debug.LogError("Invalid difficulty selected.");
         }
     }
+
 
     void CheckAnswer()
     {
