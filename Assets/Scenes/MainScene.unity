@@ -4455,18 +4455,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0496521, y: -0.15213299}
+  m_Offset: {x: -1.223667, y: 0.14863086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03125, y: 1}
+    oldSize: {x: 4.796875, y: 4.40625}
     newSize: {x: 0.33, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5885925, y: 0.7013378}
+  m_Size: {x: 2.2847493, y: 3.8057394}
   m_EdgeRadius: 0
 --- !u!50 &1457883133
 Rigidbody2D:
@@ -4536,7 +4536,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e2976d09b53264ffbbb9210a1ae1dcc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69191ce828222e347b6519982271cd7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4547,22 +4547,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1457883135
-Transform:
+--- !u!224 &1457883135
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457883130}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.87, y: 1.86, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 634675893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -8.688, y: 1.762}
+  m_SizeDelta: {x: 10, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457883136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6833,10 +6837,10 @@ SceneRoots:
   - {fileID: 2118811372}
   - {fileID: 1271283513}
   - {fileID: 438995423}
-  - {fileID: 1457883135}
   - {fileID: 9812596}
   - {fileID: 641548201}
   - {fileID: 1130482460}
   - {fileID: 896853801}
   - {fileID: 1061431756}
   - {fileID: 519275169}
+  - {fileID: 1457883135}
